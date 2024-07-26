@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEG Dev Studios</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/styles/proyects.css">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <img src="/recources/img/logo/logoredondogris.png" alt="Logo de la empresa">
+            <h1>JEG Dev Studios</h1>
+        </div>
+        <nav class="dropdown">
+            <button class="dropbtn">
+                Menu
+            </button>
+            <ul>
+                <li class="dropdown-content">
+                    <a class="active" href="/index.html">Inicio</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="/pages/services.html">Servicios</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="/pages/proyects.html">Proyectos</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="/pages/aboutus.html">Sobre Nosotros</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="/pages/blog.html">Blog</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="/pages/contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Nuestros mejores proyectos</h1>
+                </div>
+                <div class="container-filter">
+                    <div class="filter-form">
+                        <div class="search-container">
+                            <label for="filterInput">Buscar: </label>
+                            <input type="text" id="filterInput" onkeyup="filterOptions()" placeholder="Buscar opciones...">
+                        </div>
+                        <div class="container-filter2">
+                            <label for="filterSelect">Opciones: </label>
+                            <select id="filterSelect" onchange="filterOptions()">
+                                <option value="">Todas</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="movil">Desarrollo Móvil</option>
+                                <option value="desktop">Desarrollo de Escritorio</option>
+                                <option value="games">Desarrollo de Videojuegos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-container">
+                    <div class="container-list">
+                        <ul class="list-container">
+                            <li class="list-element filtered-item" data-type="web">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto Web</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto web</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="movil">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto Móvil</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto móvil</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="desktop">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto de Escritorio</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto de escritorio</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="games">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto de Videojuegos</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto de videojuegos</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 JEG Dev Studios. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/scripts/proyects.js"></script>
+</body>
+</html>
