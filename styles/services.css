@@ -1,3 +1,125 @@
+
+.container-icon {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    img {
+        padding: 2px;
+        width: 70px;
+    }
+}
+.count-products {
+    display: flex;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background: red;
+    border-radius: 50%;
+    border: none;
+    z-index: 3;
+    span {
+        border-radius: 50%;
+        color: #fff;
+        padding: 10px;
+        font-size: 0.7em;
+    }
+}
+.container-cart-products {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 270px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+    padding: 10px;
+    color: #000;
+    z-index: 3;
+    .icon-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .container-title {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .info-product {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+        overflow-y: auto;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            width: 70%;
+            height: 30px;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 30px;
+        }
+        .icon-delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 0;
+            background: transparent;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            img {
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+    .total-cart-products {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
 article {
     display: flex;
     flex-direction: row;
@@ -38,6 +160,9 @@ article {
                 height: 100%;
                 padding: 20px;
                 .container-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 100%;
                     height: 100%;
                     text-align: left;
@@ -72,34 +197,59 @@ article {
                 padding: 20px 20px 20px 0;
                 .container-list {
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     .list-container {
-                        width: 100%;
-                        height: 100%;
+                        width: auto;
+                        height: auto;
                         padding: 10px;
                         overflow-x: auto;
+                        border: none;
                         .list-element {
-                            margin: 0 20px;
+                            margin: 20px 20px;
+                            padding: 0;
                             color: #000;
+                            border: none;
                             .slider-box {
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 8px;
-                                margin: 10px 0 10px 0;
+                                width: 270px;
+                                height: 152px;
+                                border-radius: 8px 8px 0 0;
                                 overflow: hidden;
-                                ul {
-                                    display: flex;
-                                    padding: 0;
+                                margin: 0;
+                                padding: 0;
+                                border: none;
+                                .list-img {
+                                    /*display: flex;*/
+                                    display: block;
                                     width: 100%;
+                                    height: auto;
                                     animation: slide 20s infinite alternate ease-in-out;
+                                    margin: 0;
+                                    padding: 0;
+                                    border: none;
                                     li {
                                         width: 100%;
+                                        height: 152px; /* Mantener la altura de cada elemento li igual a la altura del contenedor */
                                         list-style: none;
                                         justify-content: center;
                                         box-sizing: border-box;
+                                        /*width: 100%;
+                                        height: 100%;
+                                        list-style: none;
+                                        justify-content: center;
+                                        box-sizing: border-box;*/
+                                        margin: 0;
+                                        padding: 0;
+                                        border: none;
                                         img {
-                                            width: 250px;
-                                            height: 100%;
+                                            object-fit: cover;
+                                            border-radius: 0;
+                                            margin: 0;
+                                            padding: 0;
+                                            position: relative;
+                                            left: 0;
+                                            width: 270px;
+                                            height: 141px;
+                                            border-radius: 0;
                                         }
                                         
                                     }
@@ -109,40 +259,72 @@ article {
                             }
                             .description-product {
                                 width: 100%;
-                                padding: 10px 0 10px 0;
-                                p {
-                                    font-size: 0.7em;
-                                }
-                            }
-                            .price {
-                                width: 100%;
-                                p {
+                                height: 238px;
+                                padding: 10px 10px 10px 10px;
+                                h1 {
+                                    width: 100%;
+                                    padding: 0 0 10px 0;
                                     text-align: center;
+                                    font-size: 1em;
+                                    font-weight: 600;
                                 }
-                            }
-                            button {
-                                margin: 20px 0 10px 0;
+                                p {
+                                    width: 100%;
+                                    height: auto;
+                                    text-align: left;
+                                    padding: 10px 0 10px 0;
+                                    font-size: 0.8em;
+                                }
+                                .price {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 0 0 10px 0;
+                                    text-align: center;
+                                    font-size: 1em;
+                                    span {
+                                        font-weight: 600;
+                                    }
+                                }
+                                button {
+                                    max-width: 100px;
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 10px 20px;
+                                    background-color: #fff;
+                                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+                                    border-radius: 15px;
+                                    border: none;
+                                    cursor: pointer;
+                                    a {
+                                        width: 100%;
+                                        height: 100%;
+                                        text-decoration: none;
+                                        color: #000;
+                                    }
+                                }
+                                button:hover {
+                                    background: #000;
+                                    color: #fff;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        
-    
     }
 }
-                         
+
 @keyframes slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
+    0% { margin-top: 0; }
+    20% { margin-top: 0; }
 
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
+    25% { margin-top: -152px; }
+    45% { margin-top: -152px; }
 
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
+    50% { margin-top: -304px; }
+    70% { margin-top: -304px; }
 
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+    75% { margin-top: -456px; }
+    100% { margin-top: -456px; }
 }

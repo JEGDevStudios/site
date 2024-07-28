@@ -78,6 +78,47 @@
     box-sizing: border-box;
     align-items: center;
     padding: 60px 0 0 0;
+    .container-principal {
+        .container-list {
+            .list-element {
+                img {
+                    border-radius: 8px;
+                    max-width: 250px;
+                    width: 100%;
+                    height: auto;
+                }
+                h1 {
+                    width: 100%;
+                    margin: 10px;
+                    text-align: center;
+                    font-size: 1em;
+                }
+                button {
+                    max-width: 100px;
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 20px;
+                    background-color: #fff;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+                    border-radius: 15px;
+                    border: none;
+                    cursor: pointer;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+                button:hover {
+                    background: #000;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .Secondary-Call-Action {
@@ -88,50 +129,52 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: space-around;
-    .container-title {
-        padding: 10px;
-        h1 {
-            font-size: 40px;
-        }
-        h2 {
-            font-size: 30px;
-        }
-        h3 {
-            font-size: 20px;
-        }
-    }
-    .logo-container {
-        img {
-            border-radius: 50%;
-            max-width: 350px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
-        }
-    }
-    .call-action {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        button {
-            margin: 20px;
-            padding: 10px 20px;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            a {
-                text-decoration: none;
-                color: #000;
+    .container-principal {
+        .container-title {
+            padding: 10px;
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 20px;
             }
         }
-        button:hover {
-            background: #000;
-            a {
-                color: #fff;
+        .logo-container {
+            img {
+                border-radius: 50%;
+                max-width: 350px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
             }
         }
-        .container-text2 {
-            font-size: 10px;
+        .call-action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button {
+                margin: 20px;
+                padding: 10px 20px;
+                background-color: #fff;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+            button:hover {
+                background: #000;
+                a {
+                    color: #fff;
+                }
+            }
+            .container-text2 {
+                font-size: 10px;
+            }
         }
     }
 }

@@ -19,26 +19,53 @@
             </button>
             <ul>
                 <li class="dropdown-content">
-                    <a class="active" href="/index.html">Inicio</a>
+                    <a class="active" href="../index.html">Inicio</a>
                 </li>
                 <li class="dropdown-content">
-                    <a class="active" href="/pages/services.html">Servicios</a>
+                    <a class="active" href="services.html">Servicios</a>
                 </li>
                 <li class="dropdown-content" style="display: none;">
-                    <a class="active" href="/pages/proyects.html">Proyectos</a>
+                    <a class="active" href="proyects.html">Proyectos</a>
                 </li>
                 <li class="dropdown-content">
-                    <a class="active" href="/pages/aboutus.html">Sobre Nosotros</a>
+                    <a class="active" href="aboutus.html">Sobre Nosotros</a>
                 </li>
                 <li class="dropdown-content" style="display: none;">
-                    <a class="active" href="/pages/blog.html">Blog</a>
+                    <a class="active" href="blog.html">Blog</a>
                 </li>
                 <li class="dropdown-content">
-                    <a class="active" href="/pages/contact.html">Contacto</a>
+                    <a class="active" href="contact.html">Contacto</a>
+                </li>
+                <li class="dropdown-content">
+                    
                 </li>
             </ul>
         </nav>
     </header>
+    <button class="container-icon" id="carrito">
+        <img class="icon-cart" src="../recources/icons/carrito.png" alt="carrito de compras">
+    </button>
+    <div class="count-products">
+        <span>0</span>
+    </div>
+    <div class="container-cart-products" id="listCart">
+        <button class="icon-close">
+            <img src="../recources/icons/icon-close.png" alt="carrito de compras">
+        </button>
+        <div class="container-title">
+            <h1>Tu carrito</h1>
+        </div>
+        <div class="info-product">
+            <p>(titulo del producto)</p>
+            <span>(precio)</span>
+            <button class="icon-delete">
+                <img src="../recources/icons/icon-close.png" alt="carrito de compras">
+            </button>
+        </div>
+        <div class="total-cart-products">
+            <p>Total:<span>(suma de todo lo del carrito)</span></p>
+        </div>
+    </div>
     <section>
         <article>
             <div class="container-principal">
@@ -66,11 +93,10 @@
                             <h2>Paquetes de diseño web</h2>
                         </div>
                         <div class="container-list">
-                            <ul class="list-container">
+                            <ul class="list-container" id="contenedor">
                                 <li class="list-element">
-                                    <h1>Paquete 1: Inicio Digital</h1>
                                     <div class="slider-box">
-                                        <ul>
+                                        <ul class="list-img">
                                             <li>
                                                 <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
                                             </li>
@@ -89,19 +115,17 @@
                                         </ul>
                                     </div>
                                     <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 1: Inicio Digital</h1>
                                         <p>Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital.</p>
+                                        <p class="price">$300 - $500<span> US</span></p>
+                                        <button class="add-to-cart" data-id="1">
+                                            add +
+                                        </button>
                                     </div>
-                                    <div class="price">
-                                        <p>$300 - $500</p>
-                                    </div>
-                                    <button>
-                                        <a href="#">add +</a>
-                                    </button>
                                 </li>
                                 <li class="list-element">
-                                    <h1>Paquete 2: Presencia Esencial</h1>
                                     <div class="slider-box">
-                                        <ul>
+                                        <ul class="list-img">
                                             <li>
                                                 <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
                                             </li>
@@ -120,19 +144,17 @@
                                         </ul>
                                     </div>
                                     <div class="description-product">
-                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios de manera clara y atractiva.</p>
+                                        <h1 class="tilte-product">Paquete 2: Presencia Esencial</h1>
+                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios.</p>
+                                        <p class="price">$600 - $900<span> US</span></p>
+                                        <button class="add-to-cart" data-id="2">
+                                            add+
+                                        </button>
                                     </div>
-                                    <div class="price">
-                                        <p>$600 - $900</p>
-                                    </div>
-                                    <button>
-                                        <a href="#">add +</a>
-                                    </button>
                                 </li>
                                 <li class="list-element">
-                                    <h1>Paquete 3: Impacto Avanzado</h1>
                                     <div class="slider-box">
-                                        <ul>
+                                        <ul class="list-img">
                                             <li>
                                                 <img src="/recources/img/img/index/img-products/dev-web/pack-3/1.png" alt="imagen representativa del producto">
                                             </li>
@@ -151,19 +173,17 @@
                                         </ul>
                                     </div>
                                     <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 3: Impacto Avanzado</h1>
                                         <p>Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica.</p>
+                                        <p class="price">$1000 - $1500<span> US</span></p>
+                                        <button class="add-to-cart" data-id="3">
+                                            add +
+                                        </button>
                                     </div>
-                                    <div class="price">
-                                        <p>$1000 - $1500</p>
-                                    </div>
-                                    <button>
-                                        <a href="#">add +</a>
-                                    </button>
                                 </li>
                                 <li class="list-element">
-                                    <h1>Paquete 4: Solución Profesional</h1>
                                     <div class="slider-box">
-                                        <ul>
+                                        <ul class="list-img">
                                             <li>
                                                 <img src="/recources/img/img/index/img-products/dev-web/pack-4/1.png" alt="imagen representativa del producto">
                                             </li>
@@ -182,19 +202,17 @@
                                         </ul>
                                     </div>
                                     <div class="description-product">
-                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO, asegurando un sitio web eficiente y atractivo.</p>
+                                        <h1 class="tilte-product">Paquete 4: Solución Profesional</h1>
+                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO.</p>
+                                        <p class="price">$2000 - $3000<span> US</span></p>
+                                        <button class="add-to-cart" data-id="4">
+                                            add +
+                                        </button>
                                     </div>
-                                    <div class="price">
-                                        <p>$2000 - $3000</p>
-                                    </div>
-                                    <button>
-                                        <a href="#">add +</a>
-                                    </button>
                                 </li>
                                 <li class="list-element">
-                                    <h1>Paquete 5: Experiencia Premium</h1>
                                     <div class="slider-box">
-                                        <ul>
+                                        <ul  class="list-img">
                                             <li>
                                                 <img src="/recources/img/img/index/img-products/dev-web/pack-5/1.png" alt="imagen representativa del producto">
                                             </li>
@@ -213,14 +231,13 @@
                                         </ul>
                                     </div>
                                     <div class="description-product">
-                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional. Ideal para aquellos que buscan lo mejor en diseño y funcionalidad web.</p>
+                                        <h1 class="tilte-product">Paquete 5: Experiencia Premium</h1>
+                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional.</p>
+                                        <p class="price">$4000 - $6000<span> US</span></p>
+                                        <button class="add-to-cart" data-id="4">
+                                            add+
+                                        </button>
                                     </div>
-                                    <div class="price">
-                                        <p>$4000 - $6000</p>
-                                    </div>
-                                    <button>
-                                        <a href="#">add +</a>
-                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -230,11 +247,11 @@
             </div>
         </article>
     </section>
-    <section>
+    <section style="display: none;">
         <article>
             <div class="container-principal">
                 <div class="container-title">
-                    <h1>Desarrollo de sitios web</h1>
+                    <h1>Desarrollo de Software</h1>
                 </div>
                 <div class="sub-container">
                     <div class="container-description">
@@ -421,7 +438,7 @@
             </div>
         </article>
     </section>
-    <section>
+    <section style="display: none;">
         <article>
             <div class="container-principal">
                 <div class="container-title">
@@ -612,7 +629,7 @@
             </div>
         </article>
     </section>
-    <section>
+    <section style="display: none;">
         <article>
             <div class="container-principal">
                 <div class="container-title">
@@ -806,5 +823,6 @@
     <footer>
         <p>&copy; 2024 JEG Dev Studios. Todos los derechos reservados.</p>
     </footer>
+    <script src="../scripts/services.js"></script>
 </body>
 </html>

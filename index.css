@@ -123,49 +123,16 @@ section {
             list-style: none;
             max-width: 270px;
             width: 100%;
-            height: auto;
+            max-height: 390px;
+            height: 100%;
             background: #fff;
             border: none;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
-            img {
-                border-radius: 8px;
-                max-width: 250px;
-                width: 100%;
-                height: auto;
-            }
-            h1 {
-                width: 100%;
-                margin: 10px;
-                text-align: center;
-                font-size: 1em;
-            }
-            button {
-                max-width: 100px;
-                width: 100%;
-                height: auto;
-                padding: 10px 20px;
-                background-color: #fff;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
-                border-radius: 15px;
-                border: none;
-                cursor: pointer;
-                a {
-                    width: 100%;
-                    height: 100%;
-                    text-decoration: none;
-                    color: #000;
-                }
-            }
-            button:hover {
-                background: #000;
-                a {
-                    color: #fff;
-                }
-            }
         }
     }
+
 }
 
 footer {
