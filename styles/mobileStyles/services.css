@@ -189,6 +189,15 @@
                                                 font-weight: 600;
                                             }
                                         }
+                                        button {
+                                            a {
+                                                color: #000;
+                                            }
+                                        }
+                                        button:hover {
+                                            background: #000;
+                                            color: #fff;
+                                        }
                                     }
                                 }
                             }

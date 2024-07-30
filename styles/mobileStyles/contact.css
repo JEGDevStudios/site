@@ -23,6 +23,7 @@
                         margin: 0;
                         padding: 5px;
                         font-weight: bold;
+                        color: #000;
                     }
                     input,select,textarea {
                         max-width: 400px;
@@ -31,10 +32,16 @@
                         margin: 0;
                         border: 1px solid #ccc;
                         border-radius: 4px;
+                        color: #000;
                     }
                     button {
                         margin: 5px;
                         padding: 10px;
+                        color: #000;
+                    }
+                    button:hover {
+                        background: #000;
+                        color: #fff;
                     }
                 }
             }
