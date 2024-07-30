@@ -1,0 +1,78 @@
+@media (max-width: 480px) {
+    .form-section {
+        flex-direction: column-reverse;
+        padding: 60px 10px 0 10px;
+        .article1 {
+            width: 100%;
+            height: 65%;
+            .contact-form {
+                width: 400px;
+                height: 455px;
+                h2 {
+                    text-align: center;
+                    padding: 5px;
+                    font-size: 1.5em;
+                    color: #333;
+                }
+                form {
+                    width: 100%;
+                    height: 100%;
+                    padding: 7.5px;
+                    label {
+                        display: block;
+                        margin: 0;
+                        padding: 5px;
+                        font-weight: bold;
+                    }
+                    input,select,textarea {
+                        max-width: 400px;
+                        width: 100%;
+                        padding: 10px;
+                        margin: 0;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+                    button {
+                        margin: 5px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .article2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 5%;
+            .container-principal {
+                width: 100%;
+                .container-title {
+                    h1 {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        aside {
+            width: 100%;
+            height: 30%;
+            .container-principal {
+                width: 100%;
+                height: auto;
+                .container-title {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 2.5em;
+                }
+                .container-btns {
+                    button {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

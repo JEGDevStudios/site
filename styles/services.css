@@ -126,203 +126,195 @@
         justify-content: space-around;
     }
 }
-article {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-    .container-principal {
+section {
+    article {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         height: 100%;
-        padding: 60px 0 0 0;
-        .container-title {
-            width: 100%;
-            height: 20%;
-            box-sizing: border-box;
-            z-index: 1;
-        }
-        .sub-container {
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        .container-principal {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
+            flex-direction: column;
             width: 100%;
-            height: 80%;
-            padding: 80px 20px 0 20px;
-            box-sizing: border-box;
-            z-index: 1;
-            .container-description {
+            height: 100%;
+            padding: 60px 0 0 0;
+            .container-title {
+                width: 100%;
+                height: 10%;
+                box-sizing: border-box;
+                z-index: 1;
+            }
+            .sub-container {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 30%;
-                height: 100%;
-                padding: 20px;
-                .container-text {
+                position: absolute;
+                width: 100%;
+                height: 90%;
+                padding: 80px 20px 0 20px;
+                box-sizing: border-box;
+                z-index: 1;
+                .container-description {
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 100%;
+                    width: 30%;
                     height: 100%;
-                    text-align: left;
-                    padding: 0;
-                    p {
-                        font-size: 0.8em;
-                    }
-                }
-                .container-technology {
-                    width: 100%;
-                    height: 100%;
-                    h1 {
+                    padding: 20px;
+                    .container-text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 100%;
-                        font-size: 1.5em;
-                        padding: 10px 0 10px 0;
-                    }
-                    ul {
+                        height: 100%;
                         text-align: left;
-                        justify-content: space-around;
-                        padding-left: 20px;
-                        li {
+                        padding: 0;
+                        p {
                             font-size: 0.8em;
                         }
                     }
+                    .container-technology {
+                        width: 100%;
+                        height: 100%;
+                        h1 {
+                            width: 100%;
+                            font-size: 1.5em;
+                            padding: 10px 0 10px 0;
+                        }
+                        ul {
+                            text-align: left;
+                            justify-content: space-around;
+                            padding-left: 20px;
+                            li {
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
                 }
-            }
-            .packs-websites {
-                display: flex;
-                flex-direction: column;
-                width: 70%;
-                height: 100%;
-                padding: 20px 20px 20px 0;
-                .container-list {
-                    width: 100%;
-                    height: auto;
-                    .list-container {
-                        width: auto;
-                        height: auto;
-                        padding: 10px;
-                        overflow-x: auto;
-                        border: none;
-                        .list-element {
-                            margin: 20px 20px;
-                            padding: 0;
-                            color: #000;
+                .packs-websites {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    height: 100%;
+                    padding: 20px 20px 20px 0;
+                    .container-list {
+                        .list-container {
+                            padding: 10px;
+                            overflow-x: auto;
                             border: none;
-                            .slider-box {
-                                width: 270px;
-                                height: 152px;
-                                border-radius: 8px 8px 0 0;
-                                overflow: hidden;
-                                margin: 0;
+                            .list-element {
+                                margin: 0 20px;
                                 padding: 0;
+                                color: #000;
                                 border: none;
-                                .list-img {
-                                    /*display: flex;*/
-                                    display: block;
-                                    width: 100%;
-                                    height: auto;
-                                    animation: slide 20s infinite alternate ease-in-out;
+                                .slider-box {
+                                    width: 270px;
+                                    height: 152px;
+                                    border-radius: 8px 8px 0 0;
+                                    overflow: hidden;
                                     margin: 0;
                                     padding: 0;
                                     border: none;
-                                    li {
+                                    .list-img {
+                                        display: block;
                                         width: 100%;
-                                        height: 152px; /* Mantener la altura de cada elemento li igual a la altura del contenedor */
-                                        list-style: none;
-                                        justify-content: center;
-                                        box-sizing: border-box;
-                                        /*width: 100%;
-                                        height: 100%;
-                                        list-style: none;
-                                        justify-content: center;
-                                        box-sizing: border-box;*/
+                                        height: auto;
+                                        animation: slide 20s infinite alternate ease-in-out;
                                         margin: 0;
                                         padding: 0;
                                         border: none;
-                                        img {
-                                            object-fit: cover;
-                                            border-radius: 0;
+                                        li {
+                                            width: 100%;
+                                            height: 152px; /* Mantener la altura de cada elemento li igual a la altura del contenedor */
+                                            list-style: none;
+                                            justify-content: center;
+                                            box-sizing: border-box;
                                             margin: 0;
                                             padding: 0;
-                                            position: relative;
-                                            left: 0;
-                                            width: 270px;
-                                            height: 141px;
-                                            border-radius: 0;
+                                            border: none;
+                                            img {
+                                                object-fit: cover;
+                                                border-radius: 0;
+                                                margin: 0;
+                                                padding: 0;
+                                                position: relative;
+                                                left: 0;
+                                                width: 270px;
+                                                height: 141px;
+                                                border-radius: 0;
+                                            }
+                                            
                                         }
                                         
                                     }
                                     
                                 }
-                                
-                            }
-                            .description-product {
-                                width: 100%;
-                                height: 238px;
-                                padding: 10px 10px 10px 10px;
-                                h1 {
+                                .description-product {
                                     width: 100%;
-                                    padding: 0 0 10px 0;
-                                    text-align: center;
-                                    font-size: 1em;
-                                    font-weight: 600;
-                                }
-                                p {
-                                    width: 100%;
-                                    height: auto;
-                                    text-align: left;
-                                    padding: 10px 0 10px 0;
-                                    font-size: 0.8em;
-                                }
-                                .price {
-                                    width: 100%;
-                                    height: auto;
-                                    padding: 0 0 10px 0;
-                                    text-align: center;
-                                    font-size: 1em;
-                                    span {
+                                    height: 238px;
+                                    padding: 10px 10px 10px 10px;
+                                    h1 {
+                                        width: 100%;
+                                        padding: 0 0 10px 0;
+                                        text-align: center;
+                                        font-size: 1em;
                                         font-weight: 600;
                                     }
-                                }
-                                button {
-                                    position: relative;
-                                    display: inline-block;
-                                    justify-content: center;
-                                    align-items: center;
-                                    max-width: 100px;
-                                    width: 100%;
-                                    max-height: 40px;
-                                    height: 100%;
-                                    padding: 10px;
-                                    border: none;
-                                    border-radius: 15px;
-                                    background-color: #fff;
-                                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
-                                    cursor: pointer;
-                                    a {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
+                                    p {
                                         width: 100%;
-                                        height: 100%;
-                                        text-decoration: none;
-                                        text-align: center;
-                                        color: #000;
+                                        height: auto;
+                                        text-align: left;
+                                        padding: 10px 0 10px 0;
+                                        font-size: 0.8em;
                                     }
-                                }
-                                button:hover {
-                                    background: #000;
-                                    color: #fff;
+                                    .price {
+                                        width: 100%;
+                                        height: auto;
+                                        padding: 0 0 10px 0;
+                                        text-align: center;
+                                        font-size: 1em;
+                                        span {
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    button {
+                                        position: relative;
+                                        display: inline-block;
+                                        justify-content: center;
+                                        align-items: center;
+                                        max-width: 100px;
+                                        width: 100%;
+                                        max-height: 40px;
+                                        height: 100%;
+                                        padding: 10px;
+                                        border: none;
+                                        border-radius: 15px;
+                                        background-color: #fff;
+                                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+                                        cursor: pointer;
+                                        a {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 100%;
+                                            height: 100%;
+                                            text-decoration: none;
+                                            text-align: center;
+                                            color: #000;
+                                        }
+                                    }
+                                    button:hover {
+                                        background: #000;
+                                        color: #fff;
+                                    }
                                 }
                             }
                         }
@@ -330,7 +322,7 @@ article {
                 }
             }
         }
-    }
+    }    
 }
 
 @keyframes slide {

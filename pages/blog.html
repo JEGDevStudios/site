@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JEG Dev Studios</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../styles/blog.css">
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
   </head>
   <body>
     <header>
+      <button class="btn-menu" id="btn-menu">
+        <img
+          src="../recources/icons/icon-menu.png"
+          alt="boton para menu desplegable"
+        />
+      </button>
       <div class="container-logo">
-        <img src="../recources/img/logo/logoredondogris.webp" alt="Logo de la empresa">
-          <h1>JEG Dev Studios</h1>
+        <img
+          src="../recources/img/logo/logoredondogris.webp"
+          alt="Logo de la empresa"
+        />
+        <h1>JEG Dev Studios</h1>
       </div>
-      <nav class="dropdown">
-        <button class="dropbtn">
-          Menu
-        </button>
+      <nav class="dropdown" id="nav-container">
         <ul>
           <li class="dropdown-content">
             <a class="active" href="../index.html">Inicio</a>
@@ -24,13 +30,13 @@
           <li class="dropdown-content">
             <a class="active" href="services.html">Servicios</a>
           </li>
-          <li class="dropdown-content" style="display: none;">
+          <li class="dropdown-content" style="display: none">
             <a class="active" href="proyects.html">Proyectos</a>
           </li>
           <li class="dropdown-content">
             <a class="active" href="aboutus.html">Sobre Nosotros</a>
           </li>
-          <li class="dropdown-content" style="display: none;">
+          <li class="dropdown-content" style="display: none">
             <a class="active" href="blog.html">Blog</a>
           </li>
           <li class="dropdown-content">
@@ -39,5 +45,7 @@
         </ul>
       </nav>
     </header>
+    
+    <script src="../index.js"></script>
   </body>
 </html>

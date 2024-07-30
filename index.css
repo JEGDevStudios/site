@@ -37,7 +37,21 @@ header {
     overflow: hidden;
     background: #000; /* Fondo del encabezado en negro */
     color: #FFFFFF; /* Texto del encabezado en blanco */
-    z-index: 999999;
+    z-index: 5;
+    .btn-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        img {
+            object-fit: cover;
+        }
+    }
     .container-logo {
         display: flex;
         align-items: center;
@@ -52,16 +66,12 @@ header {
         }
     }
     nav {
-        .dropbtn {
-            display: none;
-        }
         ul {
+            display: flex;
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            li {  
-                float: left;
+            li {
                 a {
                     display: block;
                     color: white;
@@ -86,26 +96,29 @@ section {
     height: 100dvh;
     box-sizing: border-box;
     z-index: 1;
-    .container-title {
-        text-align: center;
-        font-size: 4em;
-        z-index: 1;
-        h1 {
-            top: 80px;
-            justify-content: center;
-            align-items: center;
+    article {
+        .container-title {
+            text-align: center;
+            font-size: 4em;
             z-index: 1;
+            h1 {
+                top: 80px;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
         }
-    }
-    .container-text {
-        text-align: center;
-        font-size: 20px;
-        padding-bottom: 20px;
-    }
-    .container-subtitle {
-        text-align: center;
-        font-size: 25px;
-        padding: 10px;
+        .container-text {
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+        .container-subtitle {
+            text-align: center;
+            font-size: 25px;
+            padding: 10px;
+        }
+
     }
 }
 
@@ -147,6 +160,14 @@ footer {
         width: 100%;
         height: 40px;
         justify-content: center;
+        .btn-menu {
+            display: flex;
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+            }
+        }
         .container-logo {
             img {
                 width: 20px;
@@ -155,36 +176,30 @@ footer {
                 font-size: 1em;
             }
         }
+        
         nav {
-            .dropbtn {
-                display: block;
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
-            }
-            .dropdown:hover{
-                .dropdown-content {
-                    display: block;
-                }
-            }
-            .dropdown:hover{
-                .dropbtn {
-                    background-color: #000000;
-                }
-            }
-            ul {              
-                position: relative;
-                display: inline-block;
+            display: none;
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 250px;
+            height: auto;
+            ul {
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 400px;
                 li {
-                    display: none;
-                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
                     background-color: #f9f9f9;
-                    min-width: 160px;
+                    width: 250px;
+                    height: auto;
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
+                    
                     a {
                         color: black;
                         padding: 12px 16px;
@@ -192,16 +207,8 @@ footer {
                         display: block;
                     }
                     a:hover {
-                        background-color: #f1f1f1;
+                        background-color: #cacaca;
                     }
-                    a.active {
-                        background-color: #04AA6D;
-                        color: white;
-                    }
-                    a:hover:not(.active) {
-                        background-color: #555;
-                        color: white;
-                      }
                 }
                 li:last-child {
                     border-bottom: none;
@@ -213,18 +220,20 @@ footer {
     section {
         display: flex;
         flex-direction: column;
-        height: 100dvh;
-        .container-title {
-            font-size: 3em;
-            margin: 5px;
-        }
-        .container-text {
-            font-size: 1em;
-            padding-bottom: 10px;
-        }
-        .container-subtitle {
-            font-size: 1.5em;
-            padding-bottom: 10px;
+        article {
+            .container-title {
+                font-size: 3em;
+                margin: 5px;
+            }
+            .container-text {
+                font-size: 1em;
+                padding-bottom: 10px;
+            }
+            .container-subtitle {
+                font-size: 1.5em;
+                padding-bottom: 10px;
+            }
+
         }
     }
     .container-list {
@@ -232,16 +241,13 @@ footer {
             padding: 10px;
             overflow: auto;
             .list-element {
-                max-width: 300px;
-                width: 100%;
-                height: auto;
-                border: none;
-                padding: 10px;
+                width: 400px;
+                height: 700px;
+                margin: 0 10px;
                 img {
                     border-radius: 8px;
-                    max-width: 250px;
-                    width: 100%;
-                    height: auto;
+                    width: 400px;
+                    height: 400px;
                 }
                 h1 {
                     font-size: 1em;
@@ -260,6 +266,7 @@ footer {
     }
 
     footer {
+        width: 100%;
         padding: 5px;
     }
 }
