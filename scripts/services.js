@@ -1,4 +1,3 @@
-// Agregar productos al carrito
 document.addEventListener('DOMContentLoaded', () => {
     const cartButton = document.getElementById('carrito');
     const cart = document.getElementById('listCart');
@@ -6,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartItems = document.getElementById('cart-items');
     const productCount = cartButton.querySelector('.count-products span');
     const cartTotal = document.getElementById('cart-total');
+    const placeOrderButton = document.getElementById('place-order'); // Asegúrate de que este id sea correcto
 
     cartButton.addEventListener('click', function() {
         document.getElementById('listCart').style.display = 'flex';
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', event => {
             const product = event.target.closest('.list-element');
-            const productName = product.querySelector('h1').textContent;
+            const productName = product.querySelector('.tilte-product').textContent; // Cambié 'h1' por '.tilte-product'
             const productPrice = product.getAttribute('data-price');
 
             const cartItem = document.createElement('li');
@@ -56,5 +56,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         cartTotal.textContent = total;
+    }
+
+    placeOrderButton.addEventListener('click', () => {
+        const orderNumber = Date.now();  // Número de pedido basado en la marca de tiempo actual
+        const cartArray = Array.from(cartItems.children).map(item => {
+            return {
+                name: item.textContent.split(' - $')[0],
+                price: item.textContent.match(/\$(\d+)/)[1]
+            };
+        });
+        const totalAmount = cartTotal.textContent;
+
+        // Guardar pedido en la base de datos
+        saveOrderToDatabase(orderNumber, cartArray, totalAmount);
+
+        // Redirigir a WhatsApp
+        const whatsappMessage = `Pedido número: ${orderNumber}\nProductos:\n${cartArray.map(item => `${item.name} - $${item.price}`).join('\n')}\nTotal: $${totalAmount} US`;
+        window.open(`https://api.whatsapp.com/send?phone=+525654320986&text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+    });
+
+    function saveOrderToDatabase(orderNumber, cart, totalAmount) {
+        const orderData = {
+            orderNumber: orderNumber,
+            cart: cart,
+            totalAmount: totalAmount,
+            date: new Date().toISOString()
+        };
+
+        console.log('Guardando pedido en la base de datos:', orderData);
+
+        fetch('http://localhost:3000/save-order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Pedido guardado:', data);
+        })
+        .catch(error => {
+            console.error('Error al guardar el pedido:', error);
+        });
     }
 });
