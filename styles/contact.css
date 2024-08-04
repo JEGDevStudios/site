@@ -46,7 +46,6 @@
                     border-radius: 4px;
                 }
                 button {
-                    position: relative;
                     display: inline-block;
                     border: none;
                     border-radius: 15px;
@@ -61,7 +60,6 @@
                     cursor: pointer;
                     align-items: center;
                     a {
-                        position: absolute;
                         top: 0;
                         left: 0;
                         display: flex;
@@ -109,8 +107,8 @@
             height: auto;
             .container-title {
                 width: 100%;
-                h1 {
-                    font-size: 0.8em;
+                h2 {
+                    font-size: 2em;
                 }
             }
             .container-btns {

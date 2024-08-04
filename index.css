@@ -164,6 +164,9 @@ footer {
         height: 40px;
         justify-content: center;
         .btn-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
             display: flex;
             img {
                 width: 40px;
@@ -172,8 +175,11 @@ footer {
             }
         }
         .container-logo {
+            width: 100%;
+            justify-content: center;
             img {
                 width: 20px;
+                margin: 10px;
             }
             h1 {
                 font-size: 1em;
@@ -271,5 +277,6 @@ footer {
     footer {
         width: 100%;
         padding: 5px;
+        z-index: 1;
     }
 }

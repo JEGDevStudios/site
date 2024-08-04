@@ -1,7 +1,7 @@
 @media (max-width: 480px) {
     .form-section {
         flex-direction: column-reverse;
-        padding: 60px 10px 0 10px;
+        padding: 0 10px 0 10px;
         .article1 {
             width: 100%;
             height: 65%;
@@ -55,22 +55,26 @@
             .container-principal {
                 width: 100%;
                 .container-title {
-                    h1 {
-                        font-size: 0.8em;
+                    width: 100%;
+                    h2 {
+                        width: 100%;
+                        font-size: 0.7em;
                     }
                 }
             }
         }
         aside {
             width: 100%;
-            height: 30%;
+            height: 25%;
             .container-principal {
                 width: 100%;
                 height: auto;
                 .container-title {
                     width: 100%;
                     padding: 10px;
-                    font-size: 2.5em;
+                    h2 {
+                        font-size: 1.5em;
+                    }
                 }
                 .container-btns {
                     button {
@@ -81,5 +85,4 @@
             }
         }
     }
-    
 }

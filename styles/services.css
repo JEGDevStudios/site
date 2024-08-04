@@ -178,7 +178,7 @@ section {
                 align-items: center;
                 position: absolute;
                 width: 100%;
-                height: 90%;
+                height: auto;
                 padding: 80px 20px 0 20px;
                 box-sizing: border-box;
                 z-index: 1;
@@ -205,7 +205,7 @@ section {
                     .container-technology {
                         width: 100%;
                         height: 100%;
-                        h1 {
+                        h2 {
                             width: 100%;
                             font-size: 1.5em;
                             padding: 10px 0 10px 0;
@@ -226,19 +226,34 @@ section {
                     width: 70%;
                     height: 100%;
                     padding: 20px 20px 20px 0;
+                    .container-subtitle {
+                        width: 100%;
+                        margin: 0;
+                        padding: 10px 0;
+                        font-size: 1em;
+                    }
                     .container-list {
+                        width: 100%;
+                        max-height: 410px;
+                        height: 100%;
                         .list-container {
+                            width: auto;
+                            height: auto;
                             padding: 10px;
                             overflow-x: auto;
                             border: none;
                             .list-element {
+                                max-width: 270px;
+                                width: 100%;
+                                height: auto;
                                 margin: 0 20px;
                                 padding: 0;
                                 color: #000;
                                 border: none;
                                 .slider-box {
-                                    width: 270px;
-                                    height: 152px;
+                                    width: 100%;
+                                    max-height: 141px;
+                                    height: 100%;
                                     border-radius: 8px 8px 0 0;
                                     overflow: hidden;
                                     margin: 0;
@@ -247,14 +262,15 @@ section {
                                     .list-img {
                                         display: block;
                                         width: 100%;
-                                        height: auto;
+                                        height: 100%;
                                         animation: slide 20s infinite alternate ease-in-out;
                                         margin: 0;
                                         padding: 0;
                                         border: none;
                                         li {
                                             width: 100%;
-                                            height: 152px; /* Mantener la altura de cada elemento li igual a la altura del contenedor */
+                                            min-width: 270px;
+                                            height: 100%;
                                             list-style: none;
                                             justify-content: center;
                                             box-sizing: border-box;
@@ -268,8 +284,9 @@ section {
                                                 padding: 0;
                                                 position: relative;
                                                 left: 0;
-                                                width: 270px;
-                                                height: 141px;
+                                                width: 100%;
+                                                max-height: 141px;
+                                                height: 100%;
                                                 border-radius: 0;
                                             }
                                             
@@ -280,11 +297,12 @@ section {
                                 }
                                 .description-product {
                                     width: 100%;
-                                    height: 238px;
-                                    padding: 10px 10px 10px 10px;
+                                    max-height: 238px;
+                                    height: 100%;
+                                    padding: 10px;
                                     h1 {
                                         width: 100%;
-                                        padding: 0 0 10px 0;
+                                        padding: 0;
                                         text-align: center;
                                         font-size: 1em;
                                         font-weight: 600;
@@ -301,7 +319,7 @@ section {
                                         height: auto;
                                         padding: 0 0 10px 0;
                                         text-align: center;
-                                        font-size: 1em;
+                                        font-size: 1.2em;
                                         span {
                                             font-weight: 600;
                                         }
@@ -353,12 +371,14 @@ section {
     0% { margin-top: 0; }
     20% { margin-top: 0; }
 
-    25% { margin-top: -152px; }
-    45% { margin-top: -152px; }
+    25% { margin-top: -141px; }
+    45% { margin-top: -141px; }
 
-    50% { margin-top: -304px; }
-    70% { margin-top: -304px; }
+    50% { margin-top: -282px; }
+    70% { margin-top: -282px; }
 
-    75% { margin-top: -456px; }
-    100% { margin-top: -456px; }
+    75% { margin-top: -423px; }
+    95% { margin-top: -423px; }
+    100% { margin-top: -564px;}
+
 }
