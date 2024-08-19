@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JEG Dev Studios</title>
+    <meta name="description" content="Ponte en contacto con JEG Dev Studios. Completa nuestro formulario de contacto o síguenos en nuestras redes sociales para obtener más información sobre nuestros servicios.">
+    <meta name="keywords" content="JEG Dev Studios, contacto, formulario de contacto, redes sociales, desarrollo de software, desarrollo de videojuegos, aplicaciones móviles, desarrollo web">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JEG Dev Studios">
+    <meta name="language" content="es-ES">
+    <link rel="icon" href="../recourses/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../recources/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../recources/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../recources/icons/favicon-16x16.png">
+    <link rel="manifest" href="../recources/icons/site.webmanifest">
+    <meta property="og:title" content="Contacto | JEG Dev Studios">
+    <meta property="og:description" content="Ponte en contacto con JEG Dev Studios para saber más sobre nuestros servicios de desarrollo de software, videojuegos, aplicaciones móviles y desarrollo web.">
+    <meta property="og:image" content="https://jegdevstudios.github.io/site/recources/img/img/index/contacto.webp">
+    <meta property="og:url" content="https://jegdevstudios.github.io/site/contacto">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/mobileStyles/contact.css">
+  </head>
+  <body>
+    <header>
+        <button class="btn-menu" id="btn-menu">
+          <img src="../recources/icons/icon-menu.png"
+            alt="boton para menu desplegable"/>
+        </button>
+        <div class="container-logo">
+            <img src="../recources/img/logo/logoredondogris.webp" alt="Logo de la empresa">
+            <h1>JEG Dev Studios</h1>
+        </div>
+        <nav class="dropdown" id="nav-container">
+            <ul>
+                <li class="dropdown-content">
+                    <a class="active" href="../index.html">Inicio</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="services.html">Servicios</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="proyects.html">Proyectos</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="aboutus.html">Sobre Nosotros</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-section">
+        <article class="article1">
+            <div class="contact-form">
+                <h2>Formulario de Contacto</h2>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Nombre completo" required>
+            
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+            
+                    <label for="type">Tipo de Consulta</label>
+                    <select name="type" required>
+                        <option value="services">Servicios</option>
+                        <option value="support">Soporte</option>
+                        <option value="general">General</option>
+                    </select>
+            
+                    <textarea id="message" name="message" rows="4" placeholder="Escriba su mensaje..."></textarea>
+            
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </article>
+        <article class="article2">
+            <div class="container-principal">
+                <div class="container-title">
+                    <h2>Ó</h2>
+                </div>
+            </div>
+        </article>
+        <aside>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h2>Contactanos por redes sociales</h2>
+                </div>
+                <div class="container-btns">
+                    <button>
+                        <a href="https://www.facebook.com/profile.php?id=61559431238008">
+                            <img src="../recources/icons/facebook.png" alt="icono de Facebook">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="https://wa.me/message/ESNGTOYTZUV3P1">
+                            <img src="../recources/icons/whatsapp.png" alt="icono de WhatsApp">
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <footer>
+        <p>&copy; 2024 JEG Dev Studios. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="../scripts/contact.js"></script>
+  </body>
+</html>

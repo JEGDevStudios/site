@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEG Dev Studios</title>
+    <meta name="description" content="Descubre los paquetes de servicios de creación de páginas web de JEG Dev Studios. Ofrecemos soluciones personalizadas y creativas para tu negocio.">
+    <meta name="keywords" content="JEG Dev Studios, servicios de creación de páginas web, desarrollo web, diseño web, paquetes de servicios web, soluciones digitales, desarrollo personalizado">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JEG Dev Studios">
+    <meta name="language" content="es-ES">
+    <link rel="icon" href="../recourses/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../recources/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../recources/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../recources/icons/favicon-16x16.png">
+    <link rel="manifest" href="../recources/icons/site.webmanifest">
+    <meta property="og:title" content="Servicios de Creación de Páginas Web | JEG Dev Studios">
+    <meta property="og:description" content="En JEG Dev Studios ofrecemos una variedad de paquetes de servicios de creación de páginas web, diseñados para satisfacer tus necesidades digitales.">
+    <meta property="og:image" content="https://jegdevstudios.github.io/site/recources/img/img/index/servicios.webp">
+    <meta property="og:url" content="https://jegdevstudios.github.io/site/servicios">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/services.css">
+    <link rel="stylesheet" href="../styles/mobileStyles/services.css">
+</head>
+<body>
+    <header>
+        <button class="btn-menu" id="btn-menu">
+          <img
+            src="../recources/icons/icon-menu.png"
+            alt="boton para menu desplegable"
+          />
+        </button>
+        <div class="container-logo">
+            <img src="../recources/img/logo/logoredondogris.webp" alt="Logo de la empresa">
+            <h1>JEG Dev Studios</h1>
+        </div>
+        <nav class="dropdown" id="nav-container">
+            <ul>
+                <li class="dropdown-content">
+                    <a class="active" href="../index.html">Inicio</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="services.html">Servicios</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="proyects.html">Proyectos</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="aboutus.html">Sobre Nosotros</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="contact.html">Contacto</a>
+                </li>
+                <li class="dropdown-content">
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <button class="container-icon" id="carrito">
+        <img class="icon-cart" src="../recources/icons/carrito.png" alt="carrito de compras">
+        <div class="count-products">
+            <span>0</span>
+        </div>
+    </button>
+    <div class="container-cart-products" id="listCart">
+        <div class="container-title">
+            <h1>Tu carrito</h1>
+            <button class="icon-close" id="close-cart">
+                <img src="../recources/icons/icon-close.png" alt="carrito de compras">
+            </button>
+        </div>
+        <ul class="cart-list" id="cart-items"></ul>
+        <div class="total-cart-products">
+            <p>Total: <span id="cart-total">0</span> US</p>
+            <button id="place-order">Realizar Pedido</button>
+        </div>
+    </div>
+    
+    <div id="order-form-modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Datos del Contratante</h3>
+            <label for="client-name">Nombre:</label>
+            <input type="text" id="client-name" required>
+            <label for="client-email">Correo Electrónico:</label>
+            <input type="email" id="client-email" required>
+            <label for="client-phone">Número de Contacto:</label>
+            <input type="tel" id="client-phone" required>
+            <button id="submit-order">Enviar Pedido</button>
+            <button id="close-modal">Cancelar</button>
+        </div>
+    </div>
+
+    <section>
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Desarrollo de sitios web</h1>
+                </div>
+                <div class="sub-container">
+                    <div class="container-description">    
+                        <div class="container-text">
+                            <p>Creamos y desarrollamos tu página web desde cero para que te inicies en el mundo del comercio digital. Desde una landing page hasta un e-commerce, diseñamos y construimos tu portafolio web, sitio para negocios, tiendas en línea, blogs y mucho más. Ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas, garantizando una presencia en línea efectiva y profesional.</p>
+                        </div>
+                        <div class="container-technology">
+                            <h2>Lenguajes y frameworks normalmente utilizados</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="packs-websites">
+                        <div class="container-subtitle">
+                            <h2>Paquetes de diseño web</h2>
+                        </div>
+                        <div class="container-list">
+                            <ul class="list-container" id="contenedor">
+                                <li class="list-element" data-price="500">
+                                    <div class="slider-box">
+                                        <ul class="list-img">
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 1: Inicio Digital</h1>
+                                        <p>Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital.</p>
+                                        <p class="price">$300 - $500<span> US</span></p>
+                                        <button class="add-to-cart">
+                                            add +
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-element" data-price="900">
+                                    <div class="slider-box">
+                                        <ul class="list-img">
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-2/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-2/segunda-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-2/tercer-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-2/segunda-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-2/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 2: Presencia Esencial</h1>
+                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios.</p>
+                                        <p class="price">$600 - $900<span> US</span></p>
+                                        <button class="add-to-cart">
+                                            add+
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-element" data-price="1500">
+                                    <div class="slider-box">
+                                        <ul class="list-img">
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-3/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-3/segunda-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-3/tercer-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-3/cuarta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-3/quinta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 3: Impacto Avanzado</h1>
+                                        <p>Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica.</p>
+                                        <p class="price">$1000 - $1500<span> US</span></p>
+                                        <button class="add-to-cart">
+                                            add +
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-element" data-price="3000">
+                                    <div class="slider-box">
+                                        <ul class="list-img">
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-4/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-4/segunda-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-4/tercer-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-4/cuarta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-4/quinta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 4: Solución Profesional</h1>
+                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO.</p>
+                                        <p class="price">$2000 - $3000<span> US</span></p>
+                                        <button class="add-to-cart">
+                                            add +
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-element" data-price="6000">
+                                    <div class="slider-box">
+                                        <ul  class="list-img">
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-5/imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-5/segunda-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-5/tercer-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-5/cuarta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                            <li>
+                                                <img src="../recources/img/img/services/img-products/dev-web/pack-5/quinta-imagen-muestra-de-pagina-web.webp" alt="imagen representativa de una landing page como producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <h1 class="tilte-product">Paquete 5: Experiencia Premium</h1>
+                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional.</p>
+                                        <p class="price">$4000 - $6000<span> US</span></p>
+                                        <button class="add-to-cart">
+                                            add+
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </section>
+    <section style="display: none;">
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Desarrollo de Software</h1>
+                </div>
+                <div class="sub-container">
+                    <div class="container-description">
+                        <div class="container-text">
+                            <p>add description</p>
+                        </div>
+                        <div class="container-technology">
+                            <h1>Lenguajes y frameworks normalmente utilizados</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="packs-websites">
+                        <div class="container-subtitle">
+                            <h2>Paquetes de diseño web</h2>
+                        </div>
+                        <div class="container-list">
+                            <ul class="list-container">
+                                <li class="list-element">
+                                    <h1>Paquete 1: Inicio Digital</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$300 - $500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 2: Presencia Esencial</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios de manera clara y atractiva.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$600 - $900</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 3: Impacto Avanzado</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$1000 - $1500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 4: Solución Profesional</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO, asegurando un sitio web eficiente y atractivo.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$2000 - $3000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 5: Experiencia Premium</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional. Ideal para aquellos que buscan lo mejor en diseño y funcionalidad web.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$4000 - $6000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </section>
+    <section style="display: none;">
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Desarrollo de sitios web</h1>
+                </div>
+                <div class="sub-container">
+                    <div class="container-description">
+                        <div class="container-text">
+                            <p>add description</p>
+                        </div>  
+                        <div class="container-technology">
+                            <h1>Lenguajes y frameworks normalmente utilizados</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="packs-websites">
+                        <div class="container-subtitle">
+                            <h2>Paquetes de diseño web</h2>
+                        </div>
+                        <div class="container-list">
+                            <ul class="list-container">
+                                <li class="list-element">
+                                    <h1>Paquete 1: Inicio Digital</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$300 - $500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 2: Presencia Esencial</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios de manera clara y atractiva.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$600 - $900</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 3: Impacto Avanzado</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$1000 - $1500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 4: Solución Profesional</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO, asegurando un sitio web eficiente y atractivo.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$2000 - $3000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 5: Experiencia Premium</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional. Ideal para aquellos que buscan lo mejor en diseño y funcionalidad web.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$4000 - $6000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </section>
+    <section style="display: none;">
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Desarrollo de sitios web</h1>
+                </div>
+                <div class="sub-container">
+                    <div class="container-description">    
+                        <div class="container-text">
+                            <p>add description</p>
+                        </div>
+                        <div class="container-technology">
+                            <h1>Lenguajes y frameworks normalmente utilizados</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="packs-websites">
+                        <div class="container-subtitle">
+                            <h2>Paquetes de diseño web</h2>
+                        </div>
+                        <div class="container-list">
+                            <ul class="list-container">
+                                <li class="list-element">
+                                    <h1>Paquete 1: Inicio Digital</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-1/Inicio.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$300 - $500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 2: Presencia Esencial</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-2/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios de manera clara y atractiva.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$600 - $900</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 3: Impacto Avanzado</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-3/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$1000 - $1500</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 4: Solución Profesional</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-4/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO, asegurando un sitio web eficiente y atractivo.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$2000 - $3000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                                <li class="list-element">
+                                    <h1>Paquete 5: Experiencia Premium</h1>
+                                    <div class="slider-box">
+                                        <ul>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/1.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/2.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/3.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/4.png" alt="imagen representativa del producto">
+                                            </li>
+                                            <li>
+                                                <img src="/recources/img/img/index/img-products/dev-web/pack-5/5.png" alt="imagen representativa del producto">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="description-product">
+                                        <p>El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional. Ideal para aquellos que buscan lo mejor en diseño y funcionalidad web.</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$4000 - $6000</p>
+                                    </div>
+                                    <button>
+                                        <a href="#">add +</a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 JEG Dev Studios. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../index.js"></script>
+    <script src="../scripts/services.js"></script>
+</body>
+</html>

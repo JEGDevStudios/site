@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEG Dev Studios</title>
+    <link rel="icon" href="../recourses/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../recources/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../recources/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../recources/icons/favicon-16x16.png">
+    <link rel="manifest" href="../recources/icons/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../styles/proyects.css">
+</head>
+<body>
+    <header>
+        <button class="btn-menu" id="btn-menu">
+          <img
+            src="../recources/icons/icon-menu.png"
+            alt="boton para menu desplegable"
+          />
+        </button>
+        <div class="container-logo">
+            <img src="../recources/img/logo/logoredondogris.webp" alt="Logo de la empresa">
+            <h1>JEG Dev Studios</h1>
+        </div>
+        <nav class="dropdown" id="nav-container">
+            <ul>
+                <li class="dropdown-content">
+                    <a class="active" href="../index.html">Inicio</a>
+                  </li>
+                <li class="dropdown-content">
+                    <a class="active" href="services.html">Servicios</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="proyects.html">Proyectos</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="aboutus.html">Sobre Nosotros</a>
+                </li>
+                <li class="dropdown-content" style="display: none;">
+                    <a class="active" href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown-content">
+                    <a class="active" href="contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <div class="container-principal">
+                <div class="container-title">
+                    <h1>Nuestros mejores proyectos</h1>
+                </div>
+                <div class="container-filter">
+                    <div class="filter-form">
+                        <div class="search-container">
+                            <label for="filterInput">Buscar: </label>
+                            <input type="text" id="filterInput" onkeyup="filterOptions()" placeholder="Buscar opciones...">
+                        </div>
+                        <div class="container-filter2">
+                            <label for="filterSelect">Opciones: </label>
+                            <select id="filterSelect" onchange="filterOptions()">
+                                <option value="">Todas</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="movil">Desarrollo Móvil</option>
+                                <option value="desktop">Desarrollo de Escritorio</option>
+                                <option value="games">Desarrollo de Videojuegos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-container">
+                    <div class="container-list">
+                        <ul class="list-container">
+                            <li class="list-element filtered-item" data-type="web">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto Web</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto web</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="movil">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto Móvil</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto móvil</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="desktop">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto de Escritorio</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto de escritorio</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-element filtered-item" data-type="games">
+                                <div class="container-img">
+                                    <img src="#" alt="imagen del proyecto">
+                                </div>
+                                <div class="container-description">
+                                    <div class="container-title">
+                                        <h1>Título del Proyecto de Videojuegos</h1>
+                                    </div>
+                                    <div class="container-text">
+                                        <p>Descripción del proyecto de videojuegos</p>
+                                    </div>
+                                    <div class="container-btn">
+                                        <button>
+                                            <a href="#">Visitar Proyecto</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 JEG Dev Studios. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../index.js"></script>
+    <script src="../scripts/proyects.js"></script>
+</body>
+</html>
