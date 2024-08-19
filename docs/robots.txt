@@ -1,8 +1,4 @@
 User-agent: *
-Allow: pages/services.html
-Allow: pages/aboutus.html
-Allow: pages/contact.html
-Disallow: pages/proyects.html
-Disallow: pages/blog.html
-
+Disallow: docs/pages/blog.html
+Disallow: docs/pages/proyects.html
 Sitemap: https://jegdevstudios.github.io/site/sitemap.xml
