@@ -57,22 +57,22 @@ function Dashboard() {
             <CardServices
                 imageUrl={imgDevWeb}
                 title="Desarrollo Web"
-                url="../pages/saber-mas/web-development"
+                url="/saber-mas/WebDev"
             />
             <CardServices
                 imageUrl={imgDevSoft}
                 title="Desarrollo de software"
-                url="../pages/saber-mas/web-development"
+                url="/saber-mas/SoftDev"
             />
             <CardServices
                 imageUrl={imgDevMob}
                 title="Desarrollo de aplicaciones"
-                url="../pages/saber-mas/web-development"
+                url="/saber-mas/AppDev"
             />
             <CardServices
                 imageUrl={imgDevGame}
                 title="Desarrollo de videojuegos"
-                url="../pages/saber-mas/web-development"
+                url="/saber-mas/GamesDev"
             />
         </ul>
       </section>

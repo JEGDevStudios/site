@@ -1,29 +1,42 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function CardProduct ({ title, text, price, moneda, imageUrl}) {
-    return (
-        <li className="card d-block w-100">
-            <img src={imageUrl} className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{text}</p>
-                <p className='card-text'>{price}<span> {moneda}</span></p>
-                <a className="btn btn-dark">
-                Add +
-                </a>
-            </div>
-        </li>
+function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd }) {
+  const handleAddToCart = () => {
+    onAdd({ title, moneda, price});
+  };
 
-    );
+  return (
+    <li className="card d-block w-100" data-price={dataPrice}>
+      <img src={imageUrl} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{text}</p>
+        <div className="d-flex flex-column">
+          <p className="card-text">
+            {price}
+            <span> {moneda}</span>
+          </p>
+          <button
+            className="btn btn-dark"
+            onClick={handleAddToCart}
+          >
+            Añadir +
+          </button>
+        </div>
+      </div>
+    </li>
+  );
 }
 
 // Validación de props
 CardProduct.propTypes = {
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    moneda: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired
+  dataPrice: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  moneda: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  onAdd: PropTypes.string.isRequired
 };
 
 export default CardProduct;
