@@ -19,12 +19,12 @@ function Services () {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const handleAddToCart = ({ title, moneda, price}) => {
+  const handleAddToCart = ({ title, moneda, dataPrice}) => {
     console.log("Producto agregado:");
     console.log("Titulo:", title);
     console.log("Moneda:", moneda);
-    console.log("Precio:", price);
-    setCartItems((prevItems) => [...prevItems, { title, moneda, price}]);
+    console.log("Precio:", parseFloat(dataPrice));
+    setCartItems((prevItems) => [...prevItems, { title, moneda, dataPrice: parseFloat(dataPrice)}]);
   };
 
   const handleRemoveProduct = (index) => {
@@ -91,55 +91,55 @@ function Services () {
               <ul className="carousel-inner list-unstyled">
                 <li className="carousel-item active">
                   <CardProduct
-                    dataPrice="300"
+                    dataPrice={300}
                     title="Paquete 1: Inicio Digital"
                     text="Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital."
                     price="$300 - $600"
-                    moneda="US"
+                    moneda="USD"
                     imageUrl={imgProduct1}
                     onAdd={handleAddToCart}
                   />
                 </li>
                 <li className="carousel-item">
                   <CardProduct
-                    dataPrice="300"
+                    dataPrice={600}
                     title="Paquete 2: Presencia Esencial"
                     text="Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios."
                     price="$600 - $900"
-                    moneda="US"
+                    moneda="USD"
                     imageUrl={imgProduct2}
                     onAdd={handleAddToCart}
                   />
                 </li>
                 <li className="carousel-item">
                   <CardProduct
-                    dataPrice="300"
+                    dataPrice={1000}
                     title="Paquete 3: Impacto Avanzado"
                     text="Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica."
                     price="$1000 - $1500"
-                    moneda="US"
+                    moneda="USD"
                     imageUrl={imgProduct3}
                     onAdd={handleAddToCart}
                   />
                 </li>
                 <li className="carousel-item">
                   <CardProduct
-                    dataPrice="300"
+                    dataPrice={2000}
                     title="Paquete 4: Solución Profesional"
                     text="Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO."
                     price="$2000 - $3000"
-                    moneda="US"
+                    moneda="USD"
                     imageUrl={imgProduct4}
                     onAdd={handleAddToCart}
                   />
                 </li>
                 <li className="carousel-item">
                   <CardProduct
-                    dataPrice="300"
+                    dataPrice={4000}
                     title="Paquete 5: Experiencia Premium"
                     text="El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional."
                     price="$4000 - $6000"
-                    moneda="US"
+                    moneda="USD"
                     imageUrl={imgProduct5}
                     onAdd={handleAddToCart}
                   />

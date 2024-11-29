@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import imgIconCart from "@/assets/icons/carrito.png";
 
 function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
   const [isCartVisible, setIsCartVisible] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const total = items.reduce((sum, item) => {
+      const price = parseFloat(item.dataPrice);
+      if (!isNaN(price)) {
+        return sum + price;
+      }
+      return sum;
+    }, 0);
+    setTotalPrice(total.toFixed(2));
+  }, [items]);
 
   const toggleCartVisibility = () => {
     setIsCartVisible(true);
@@ -13,16 +25,15 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
     setIsCartVisible(false);
   };
 
-  // Enviar datos al backend
   const createNumberOrder = async () => {
     try {
-      // Solicitar el número de orden al backend
+
       const response = await fetch("https://jegdevstudios.onrender.com/generate-order-number");
   
       const data = await response.json();
   
       if (response.ok) {
-        setOrderNumber(data.orderNumber); // Establecer el número de orden recibido
+        setOrderNumber(data.orderNumber);
       } else {
         alert("Hubo un error al generar el número de orden");
       }
@@ -30,7 +41,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
       console.error(error);
       alert("Hubo un error al solicitar el número de orden.");
     }
-  };  
+  };
 
   return (
     <>
@@ -72,7 +83,9 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
                 <div className="d-flex flex-column">
                   <h5>{item.title}</h5>
                   <p>
-                    Precio: {item.price} {item.moneda}
+                    Precio: {item.dataPrice !== null && item.dataPrice !== undefined && item.dataPrice !== '' 
+                      ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(item.dataPrice)
+                      : 'Precio no disponible'}
                   </p>
                 </div>
                 <button
@@ -87,12 +100,14 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
           </ul>
         )}
         <div className="d-flex justify-content-between align-items-center w-100 p-2 m-0 position-relative">
-          <div className="d-flex justify-content-start align-items-center">$0.00</div>
+          <div className="d-flex justify-content-start align-items-center">
+            Total: ${totalPrice}
+          </div>
           <button
             className="btn btn-dark"
             onClick={() => {
               closeCart(); // Cerrar el carrito
-              createNumberOrder();//crear número de orden
+              createNumberOrder(); // Crear número de orden
               onOpenOrderForm(); // Abrir el formulario
             }}
           >
@@ -107,9 +122,9 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
 ShoppingCart.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      moneda: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      moneda: PropTypes.string,
+      dataPrice: PropTypes.number
     })
   ).isRequired,
   onRemove: PropTypes.func.isRequired,

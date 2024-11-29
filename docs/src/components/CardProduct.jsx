@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd }) {
   const handleAddToCart = () => {
-    onAdd({ title, moneda, price});
+    onAdd({ title, moneda, dataPrice});
   };
 
   return (
@@ -30,7 +30,7 @@ function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd })
 
 // Validación de props
 CardProduct.propTypes = {
-  dataPrice: PropTypes.string.isRequired,
+  dataPrice: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
