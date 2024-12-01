@@ -140,7 +140,7 @@ function AboutUs () {
                     </p>
                     <div className='d-flex justify-content-left aling-items-center gap-4'>
                         <ButtonsSocial
-                            Tamaño = {{width: "4rem"}}
+                            tamaño = {{width: "4rem"}}
                         />
                     </div>
                 </div>
