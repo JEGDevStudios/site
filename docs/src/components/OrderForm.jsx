@@ -1,33 +1,57 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function OrderForm({ onClose, onSubmit, orderNumber, items }) {
+function OrderForm({ onClose, orderNumber, items }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
+  
+  const [orderData, setOrderData] = useState({
+    orderNumber,
+    name,
+    email,
+    contact,
+    items,
+  });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const submitDB = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('https://jegdevstudios.onrender.com/submit-db', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(orderData),
+      });
 
-    const orderData = {
+      if (response.ok) {
+          alert('Se ha generado su orden exitosamente');
+          setOrderData({
+            orderNumber: '',
+            name: '',
+            email: '',
+            contact: '',
+            items: '',
+          });
+      } else {
+          alert('Error al generar su orden');
+      }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error al generar su orden');
+    }
+  };
+
+  const openWhatsApp = ({ orderNumber, name, email, contact, items }) => {
+    console.log("Abriendo WhatsApp con estos datos:", {
       orderNumber,
       name,
       email,
       contact,
       items,
-    };
-
-    // Enviar los datos al backend
-    await onSubmit(orderData);
-
-    // Luego abrir WhatsApp
-    openWhatsApp(orderData);
-
-    // Cerrar el formulario
-    onClose();
-  };
-
-  const openWhatsApp = ({ orderNumber, name, email, contact, items }) => {
+    });
     // Crear el mensaje predefinido para WhatsApp
     let message = `Pedido Nº ${orderNumber}\n`;
     message += `Nombre: ${name}\n`;
@@ -36,7 +60,7 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
 
     // Agregar los productos al mensaje
     items.forEach((item) => {
-      message += `${item.title} (Cantidad: ${item.moneda}, Precio: $${item.price})\n`;
+      message += `${item.title} (Cantidad: ${item.moneda}, Precio: $${item.dataPrice})\n`;
     });
 
     // Codificar el mensaje para la URL de WhatsApp
@@ -46,7 +70,7 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
     const phoneNumber = "+525654320986";
 
     // Construir la URL de WhatsApp
-    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
     // Abrir WhatsApp
     window.open(url, "_blank");
@@ -56,13 +80,14 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
     <div className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center" style={{ zIndex: 2 }}>
       <div className="bg-white p-4 rounded shadow-lg" style={{ width: '400px' }}>
         <h2 className="text-center mb-4">Formulario de Pedido</h2>
-        <form onSubmit={handleSubmit}>
+        <form >
           <div className="mb-3">
             <label htmlFor="orderNumber" className="form-label">Número de Orden</label>
             <input
               type="text"
               className="form-control"
               id="orderNumber"
+              placeholder="Cargando..."
               value={orderNumber}
               readOnly
             />
@@ -108,7 +133,7 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
             >
               Cancelar
             </button>
-            <button type="submit" className="btn btn-primary">
+            <button type="onSubmit" className="btn btn-primary" onClick={() => {openWhatsApp(); submitDB();}}>
               Enviar Pedido
             </button>
           </div>
@@ -121,9 +146,9 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
 OrderForm.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      moneda: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      moneda: PropTypes.string,
+      dataPrice: PropTypes.number,
     })
   ).isRequired,
   orderNumber: PropTypes.string.isRequired,

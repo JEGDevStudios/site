@@ -9,7 +9,7 @@ function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd })
     <div className="card d-block w-100" data-price={dataPrice}>
       <img src={imageUrl} className="card-img-top" alt="..." />
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
+        <h5 className="card-title text-center">{title}</h5>
         <p className="card-text">{text}</p>
         <div className="d-flex flex-column">
           <p className="card-text">

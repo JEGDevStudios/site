@@ -27,11 +27,12 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
 
   const createNumberOrder = async () => {
     try {
+      const response = await fetch(
+        "https://jegdevstudios.onrender.com/generate-order-number"
+      );
 
-      const response = await fetch("https://jegdevstudios.onrender.com/generate-order-number");
-  
       const data = await response.json();
-  
+
       if (response.ok) {
         setOrderNumber(data.orderNumber);
       } else {
@@ -70,22 +71,36 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
       >
         <div className="d-flex w-100 gap-5 p-2 m-0 justify-content-center position-relative">
           <h2 className="text-center">Shopping Cart</h2>
-          <button className="btn btn-dark text-light position-absolute top-0 end-0" onClick={closeCart}>
+          <button
+            className="btn btn-dark text-light position-absolute top-0 end-0"
+            onClick={closeCart}
+          >
             X
           </button>
         </div>
         {items.length === 0 ? (
-          <p className="text-center w-100 h-100">No hay productos en el carrito.</p>
+          <p className="text-center w-100 h-100">
+            No hay productos en el carrito.
+          </p>
         ) : (
           <ul className="d-flex flex-column align-items-center justify-content-start w-100 h-100 ps-4 pe-4 overflow-auto">
             {items.map((item, index) => (
-              <li className="d-flex justify-content-between align-items-center gap-2 w-100" key={index}>
+              <li
+                className="d-flex justify-content-between align-items-center gap-2 w-100"
+                key={index}
+              >
                 <div className="d-flex flex-column">
                   <h5>{item.title}</h5>
                   <p>
-                    Precio: {item.dataPrice !== null && item.dataPrice !== undefined && item.dataPrice !== '' 
-                      ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(item.dataPrice)
-                      : 'Precio no disponible'}
+                    Precio:{" "}
+                    {item.dataPrice !== null &&
+                    item.dataPrice !== undefined &&
+                    item.dataPrice !== ""
+                      ? new Intl.NumberFormat("en-US", {
+                          style: "currency",
+                          currency: "USD",
+                        }).format(item.dataPrice)
+                      : "Precio no disponible"}
                   </p>
                 </div>
                 <button
@@ -124,12 +139,12 @@ ShoppingCart.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       moneda: PropTypes.string,
-      dataPrice: PropTypes.number
+      dataPrice: PropTypes.number,
     })
   ).isRequired,
   onRemove: PropTypes.func.isRequired,
   onOpenOrderForm: PropTypes.func.isRequired,
-  setOrderNumber: PropTypes.func.isRequired
+  setOrderNumber: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

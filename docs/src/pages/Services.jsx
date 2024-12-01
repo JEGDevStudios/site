@@ -61,7 +61,7 @@ function Services () {
         onOpenOrderForm={openOrderForm}
         setOrderNumber={setOrderNumber}
       />
-      <section className="d-flex flex-column w-100 p-5 overflow-x-auto">
+      <section className="d-flex flex-column w-100 vh-100 p-5 overflow-x-auto">
         <div className="d-flex justify-content-center pt-5">
           <h1 className="display-1">Desarrollo de sitios web</h1>
         </div>
