@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Redirigiendo...</title>
     <script>
-      // Redirige a la ruta original, dejando que React maneje el enrutamiento
-      const redirectTo = window.location.pathname + window.location.search;
-      window.location.replace(`/${redirectTo}`);
+      (function() {
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+
+        // Asegura que la ruta mantenga el prefijo correcto
+        var base = "/site"; // Usa el mismo "basename" que en tu Router
+
+        // Si la ruta ya tiene el prefijo correcto, no lo duplicamos
+        if (!pathname.startsWith(base)) {
+          pathname = base + pathname;
+        }
+
+        window.location.replace(pathname + search);
+      })();
     </script>
   </head>
   <body>
