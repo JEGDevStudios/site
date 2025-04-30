@@ -7,7 +7,7 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg bg-black fixed-top w-100">
                 <div className="container-fluid">
                     {/* Logo y Nombre */}
-                    <Link to="/site/" aria-current="page" className="navbar-brand text-light">
+                    <Link to="/" aria-current="page" className="navbar-brand text-light">
                         <img
                             src={iconLogo}
                             alt="Logo"
@@ -35,32 +35,32 @@ function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto"> {/* Clave: ms-auto alinea a la derecha */}
                             <li className="nav-item">
-                                <Link to="/site/" className="nav-link active text-light" aria-current="page">
+                                <Link to="/" className="nav-link active text-light" aria-current="page">
                                     Home
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/site/services" className="nav-link active text-light">
+                                <Link to="/services" className="nav-link active text-light">
                                     Servicios
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/site/proyects" className="nav-link disabled text-light" style={{ display: 'none' }}>
+                                <Link to="/proyects" className="nav-link disabled text-light" style={{ display: 'none' }}>
                                     Proyectos
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/site/aboutus" className="nav-link active text-light">
+                                <Link to="/aboutus" className="nav-link active text-light">
                                     Sobre Nosotros
                                 </Link>
                             </li>
                             <li className="nav-item" style={{ display: 'none' }}>
-                                <Link to="/site/blog" className="nav-link disabled text-light">
+                                <Link to="/blog" className="nav-link disabled text-light">
                                     Blog
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/site/contact" className="nav-link active text-light">
+                                <Link to="/contact" className="nav-link active text-light">
                                     Contacto
                                 </Link>
                             </li>

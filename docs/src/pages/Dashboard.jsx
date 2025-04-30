@@ -20,7 +20,7 @@ function Dashboard() {
           <div className="d-flex aling-items-center justify-content-center w-100 gap-5">
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/site/Aboutus"
+              to="/Aboutus"
               style={{ width: "12rem" }}
             >
               Conócenos
@@ -28,7 +28,7 @@ function Dashboard() {
 
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/site/Services"
+              to="/Services"
               style={{ width: "12rem" }}
             >
               Nuestros Servicios
@@ -36,7 +36,7 @@ function Dashboard() {
 
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/site/Contact"
+              to="/Contact"
               style={{ width: "12rem" }}
             >
               Contacto
@@ -69,22 +69,22 @@ function Dashboard() {
           <CardServices
             imageUrl={imgDevWeb}
             title="Desarrollo Web"
-            url="/site/saber-mas/WebDev"
+            url="/saber-mas/WebDev"
           />
           <CardServices
             imageUrl={imgDevSoft}
             title="Desarrollo de software"
-            url="/site/saber-mas/SoftDev"
+            url="/saber-mas/SoftDev"
           />
           <CardServices
             imageUrl={imgDevMob}
             title="Desarrollo de aplicaciones"
-            url="/site/saber-mas/AppDev"
+            url="/saber-mas/AppDev"
           />
           <CardServices
             imageUrl={imgDevGame}
             title="Desarrollo de videojuegos"
-            url="/site/saber-mas/GamesDev"
+            url="/saber-mas/GamesDev"
           />
         </ul>
       </section>
