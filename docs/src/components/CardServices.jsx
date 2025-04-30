@@ -6,7 +6,7 @@ function CardServices({ imageUrl, title, url }) {
     <li className="card d-block" style={{ Width: "18rem" }}>
       <img src={imageUrl} className="card-img-top" alt="imagen de la tarjeta" />
       <div className="card-body d-flex flex-column ">
-        <h5 className="card-title text-center">{title}</h5>
+        <h3 className="h5 card-title text-center">{title}</h3>
         <Link to={url} className="btn btn-dark">
           ver más
         </Link>
