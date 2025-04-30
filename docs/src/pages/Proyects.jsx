@@ -36,7 +36,7 @@ function Proyects() {
               <ul className="list-container">
                 <li className="list-element filtered-item" data-type="web">
                   <div className="container-img">
-                    <img src="#" alt="imagen del proyecto" />
+                    <img src="#" alt="imagen del proyecto" loading="lazy"/>
                   </div>
                   <div className="container-description">
                     <div className="container-title">
@@ -54,7 +54,7 @@ function Proyects() {
                 </li>
                 <li className="list-element filtered-item" data-type="movil">
                   <div className="container-img">
-                    <img src="#" alt="imagen del proyecto" />
+                    <img src="#" alt="imagen del proyecto" loading="lazy"/>
                   </div>
                   <div className="container-description">
                     <div className="container-title">

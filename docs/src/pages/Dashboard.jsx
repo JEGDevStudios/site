@@ -48,6 +48,7 @@ function Dashboard() {
             className="d-flex w-100 img-fluid"
             src={imgBackgraund}
             alt="imagen de computadora con un programa para desarrolladores habierto con codigo de programacion"
+            loading="lazy"
           />
         </aside>
       </section>
@@ -98,6 +99,7 @@ function Dashboard() {
             style={{ width: "16rem" }}
             src={iconLogo}
             alt="logo de la empresa"
+            loading="lazy"
           />
         </div>
         <div className="d-flex justify-content-center w-100 pt-2 pb-2">

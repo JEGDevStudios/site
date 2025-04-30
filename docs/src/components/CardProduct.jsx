@@ -7,7 +7,7 @@ function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd })
 
   return (
     <div className="card d-block w-100" data-price={dataPrice}>
-      <img src={imageUrl} className="card-img-top" alt="..." />
+      <img src={imageUrl} className="card-img-top" alt="..." loading="lazy"/>
       <div className="card-body">
         <h5 className="card-title text-center">{title}</h5>
         <p className="card-text">{text}</p>

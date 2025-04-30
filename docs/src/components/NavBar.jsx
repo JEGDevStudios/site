@@ -7,13 +7,14 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg align-items-center bg-black fixed-top w-100">
                 <div className="container-fluid align-items-center">
                     {/* Logo y Nombre */}
-                    <Link to="/" aria-current="page" className="navbar-brand text-light align-items-center text-center p-0">
+                    <Link to="/" aria-current="page" className="navbar-brand text-light d-flex align-items-center text-center p-0">
                         <img
                             src={iconLogo}
                             alt="Logo"
                             width={40}
                             height={40}
                             className="d-inline-block align-text-top p-1"
+                            loading="lazy"
                         />
                         JEG Dev Studios
                     </Link>

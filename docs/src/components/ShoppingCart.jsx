@@ -57,6 +57,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
             className="img-fluid"
             src={imgIconCart}
             alt="carrito de compras"
+            loading="lazy"
           />
         </button>
       )}
