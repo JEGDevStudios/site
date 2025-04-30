@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página principal -->
+  <url>
+    <loc>https://jegdevstudios.com/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <!-- Página "Sobre Nosotros" -->
+  <url>
+    <loc>https://jegdevstudios.com/services</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Página de "Servicios" -->
+  <url>
+    <loc>https://jegdevstudios.com/aboutus</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Página de "Contacto" -->
+  <url>
+    <loc>https://jegdevstudios.com/contact</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Página de "Saber más WebDev" -->
+  <url>
+    <loc>https://jegdevstudios.com/saber-mas/WebDev</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Página de "Saber más SoftDev" -->
+  <url>
+    <loc>https://jegdevstudios.com/saber-mas/SoftDev</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <!-- Página de "Saber más AppDev" -->
+  <url>
+    <loc>https://jegdevstudios.com/saber-mas/AppDev</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <!-- Página de "Saber más GamesDev" -->
+  <url>
+    <loc>https://jegdevstudios.com/saber-mas/GamesDev</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>
