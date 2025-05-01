@@ -1,0 +1,4 @@
+user-agent: *
+Disallow: /Blog.jsx
+Disallow: /Proyects.jsx
+Sitemap: https://jegdevstudios.com/sitemap.xml
