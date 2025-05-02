@@ -1,19 +1,20 @@
-import { useState, useEffect } from "react";
-import "@/index.css";
-import ShoppingCart from "@/components/ShoppingCart";
-import CardProduct from "@/components/CardProduct";
-import OrderForm from "@/components/OrderForm";
-import imgProduct1 from '@/assets/img/img/services/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp';
-import imgProduct2 from '@/assets/img/img/services/img-products/dev-web/pack-2/imagen-muestra-de-pagina-web.webp';
-import imgProduct3 from '@/assets/img/img/services/img-products/dev-web/pack-3/imagen-muestra-de-pagina-web.webp';
-import imgProduct4 from '@/assets/img/img/services/img-products/dev-web/pack-4/imagen-muestra-de-pagina-web.webp';
-import imgProduct5 from '@/assets/img/img/services/img-products/dev-web/pack-5/imagen-muestra-de-pagina-web.webp';
+'use client'; // Marcar este archivo como Client Component
+import { useState, useEffect } from 'react';
+import ShoppingCart from "../../components/ShoppingCart";
+import CardProduct from "../../components/CardProduct";
+import OrderForm from "../../components/OrderForm";
 
 function Services () {
-  const [cartItems, setCartItems] = useState(() => {
+  // Inicializa el estado con un array vacío en el servidor/build
+  const [cartItems, setCartItems] = useState([]);
+
+  // Efecto para cargar desde localStorage solo en el cliente
+  useEffect(() => {
     const storedCart = localStorage.getItem("cartItems");
-    return storedCart ? JSON.parse(storedCart) : [];
-  });
+    if (storedCart) {
+      setCartItems(JSON.parse(storedCart));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -45,7 +46,6 @@ function Services () {
   const handleSunmitOrder = (orderData) => {
     console.log("Pedido enviado:", orderData);
   };
-
   return (
     <>
       {isFormVisible && (
@@ -96,7 +96,7 @@ function Services () {
                     text="Este paquete es ideal para pequeñas empresas o emprendedores que buscan una presencia en línea sencilla y efectiva. Incluye una página única con diseño responsivo y funcionalidades básicas para comenzar en el mundo digital."
                     price="$300 - $600"
                     moneda="USD"
-                    imageUrl={imgProduct1}
+                    imageUrl='/img/img-products/dev-web/pack-1/imagen-muestra-de-pagina-web.webp'
                     onAdd={handleAddToCart}
                   />
                 </li>
@@ -107,7 +107,7 @@ function Services () {
                     text="Diseñado para negocios que necesitan un sitio web más completo, este paquete incluye hasta 3 páginas con un diseño profesional y responsivo. Perfecto para empresas que desean mostrar su información básica y servicios."
                     price="$600 - $900"
                     moneda="USD"
-                    imageUrl={imgProduct2}
+                    imageUrl="/img/img-products/dev-web/pack-2/imagen-muestra-de-pagina-web.webp"
                     onAdd={handleAddToCart}
                   />
                 </li>
@@ -118,7 +118,7 @@ function Services () {
                     text="Para empresas que buscan destacarse, este paquete ofrece hasta 5 páginas con un diseño altamente personalizable, animaciones CSS y una galería de imágenes. Es ideal para quienes desean una presencia web más robusta y dinámica."
                     price="$1000 - $1500"
                     moneda="USD"
-                    imageUrl={imgProduct3}
+                    imageUrl='/img/img-products/dev-web/pack-3/imagen-muestra-de-pagina-web.webp'
                     onAdd={handleAddToCart}
                   />
                 </li>
@@ -129,7 +129,7 @@ function Services () {
                     text="Este paquete está pensado para negocios establecidos que necesitan una solución web completa y profesional. Incluye hasta 10 páginas con funcionalidades avanzadas como formularios personalizados y optimización SEO."
                     price="$2000 - $3000"
                     moneda="USD"
-                    imageUrl={imgProduct4}
+                    imageUrl='/img/img-products/dev-web/pack-4/imagen-muestra-de-pagina-web.webp'
                     onAdd={handleAddToCart}
                   />
                 </li>
@@ -140,7 +140,7 @@ function Services () {
                     text="El paquete más completo, diseñado para grandes empresas o proyectos ambiciosos. Ofrece páginas ilimitadas, diseño totalmente a medida, integraciones avanzadas y una experiencia de usuario excepcional."
                     price="$4000 - $6000"
                     moneda="USD"
-                    imageUrl={imgProduct5}
+                    imageUrl='/img/img-products/dev-web/pack-5/imagen-muestra-de-pagina-web.webp'
                     onAdd={handleAddToCart}
                   />
                 </li>

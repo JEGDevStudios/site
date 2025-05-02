@@ -1,10 +1,32 @@
+export const metadata = {
+  title: "Desarrollo web", // Se combinará: "Detalles de Desarrollo de Aplicaciones | JEG Dev Studios"
+  description:
+    "Explora todo sobre nuestro servicio de desarrollo web",
+  keywords: [
+    "sobre el desarrollo web",
+    "acerca de nuestros servicios",
+    "acerca de desarrollo web",
+    "informacion de nuestros paquetes",
+    "sobre nuestros paquedes de desarollo",
+    "jeg dev studios",
+  ],
+  alternates: {
+    canonical: "https://jegdevstudios.com/saber-mas/web-dev",
+  },
+  openGraph: {
+    title: "Desarrollo web | JEG Dev Studios",
+    description:
+      "Información detallada sobre cómo creamos sitios web personalizados.",
+    url: "https://jegdevstudios.com/saber-mas/web-dev",
+    // Hereda la imagen por defecto del layout, o puedes especificar una diferente aquí
+    // images: [ { url: '...', width: ..., height: ..., alt: '...' } ],
+  },
+};
 function WebDev() {
   return (
     <section className="d-flex flex-column w-100 p-5 m-0 gap-5">
       <article className="d-flex flex-column pt-5 gap-3">
-        <h1>
-          Saber Más sobre Nuestro Servicio de Desarrollo Web
-        </h1>
+        <h1>Saber Más sobre Nuestro Servicio de Desarrollo Web</h1>
         <p>
           En <strong>JEG Dev Studios</strong>, transformamos tus ideas en sitios
           web innovadores y funcionales que destacan en el mundo digital.

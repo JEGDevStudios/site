@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import iconLogo from '../assets/img/logo/logoredondogris.webp';
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 function NavBar() {
     return (
@@ -7,16 +8,15 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg align-items-center bg-black fixed-top w-100">
                 <div className="container-fluid d-flex align-items-center">
                     {/* Logo y Nombre */}
-                    <Link to="/" aria-current="page" className="navbar-brand text-light d-flex justify-content-center align-items-center text-center p-0">
-                        <img
-                            src={iconLogo}
+                    <Link href="/" className="navbar-brand text-light d-flex justify-content-center align-items-center text-center text-light text-decoration-none p-0">
+                        <Image
+                            src="/img/logo/logoredondogris.webp"
                             alt="Logo"
                             width={40}
                             height={40}
                             className="d-inline-block align-text-top p-1"
-                            loading="lazy"
                         />
-                        <h1 className='m-0 p-0 text-center fs-5'>JEG Dev Studios</h1>
+                        <h1 className="m-0 p-0 text-center fs-5">JEG Dev Studios</h1>
                     </Link>
 
                     {/* Botón Hamburguesa para móviles */}
@@ -34,34 +34,34 @@ function NavBar() {
 
                     {/* Menú */}
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto"> {/* Clave: ms-auto alinea a la derecha */}
-                            <li className="nav-item ">
-                                <Link to="/" className="nav-link active text-light" aria-current="page">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <Link href="/"  className="nav-link active text-light">
                                     Home
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/services" className="nav-link active text-light">
+                                <Link href="/services" className="nav-link active text-light">
                                     Servicios
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/proyects" className="nav-link disabled text-light" style={{ display: 'none' }}>
+                            <li className="nav-item" style={{ display: 'none' }}>
+                                <Link href="/proyects" className="nav-link disabled text-light">
                                     Proyectos
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/aboutus" className="nav-link active text-light">
+                                <Link href="/about" className="nav-link active text-light">
                                     Sobre Nosotros
                                 </Link>
                             </li>
                             <li className="nav-item" style={{ display: 'none' }}>
-                                <Link to="/blog" className="nav-link disabled text-light">
+                                <Link href="/blog" className="nav-link disabled text-light">
                                     Blog
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/contact" className="nav-link active text-light">
+                                <Link href="/contact" className="nav-link active text-light">
                                     Contacto
                                 </Link>
                             </li>

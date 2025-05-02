@@ -1,3 +1,18 @@
+export const metadata = {
+  title: 'Detalles de Desarrollo de Videojuegos', // Se combinará: "Detalles de Desarrollo de Videojuegos | JEG Dev Studios"
+  description: 'Descubre cómo JEG Dev Studios da vida a tus ideas de videojuegos. Desarrollamos juegos para diversas plataformas utilizando motores como Unity y Unreal Engine.',
+  keywords: ['desarrollo de videojuegos', 'crear videojuego', 'unity', 'unreal engine', 'desarrollo juegos moviles', 'juegos pc', 'juegos consola', 'diseño de juegos', 'programacion videojuegos', 'jeg dev studios'],
+  alternates: {
+    canonical: 'https://jegdevstudios.com/saber-mas/games-dev',
+  },
+  openGraph: {
+    title: 'Servicio de Desarrollo de Videojuegos | JEG Dev Studios',
+    description: 'Conoce nuestro proceso y tecnologías para la creación de experiencias de juego inmersivas.',
+    url: 'https://jegdevstudios.com/saber-mas/games-dev',
+    // Hereda la imagen por defecto del layout, o puedes especificar una diferente aquí
+    // images: [ { url: '...', width: ..., height: ..., alt: '...' } ],
+  },
+};
 function GamesDev () {
   return (
     <section className="d-flex flex-column w-100 p-5 m-0 gap-5">

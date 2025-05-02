@@ -1,3 +1,4 @@
+import React from 'react';
 function Footer (){
     return (
         <footer className="d-flex flex-column justify-content-center aling-items-center bg-white text-black text-center w-100 p-3">

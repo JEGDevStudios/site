@@ -1,3 +1,27 @@
+export const metadata = {
+  title: "Desarrollo de software", // Se combinará: "Detalles de Desarrollo de Aplicaciones | JEG Dev Studios"
+  description:
+    "Explora todo sobre nuestro servicio de desarrollo de software",
+  keywords: [
+    "sobre el desarrollo de software",
+    "acerca de nuestros servicios",
+    "acerca de desarrollo de software",
+    "informacion de nuestros paquetes",
+    "sobre nuestros paquedes de desarollo",
+    "jeg dev studios",
+  ],
+  alternates: {
+    canonical: "https://jegdevstudios.com/saber-mas/soft-dev",
+  },
+  openGraph: {
+    title: "Desarrollo de software | JEG Dev Studios",
+    description:
+      "Información detallada sobre cómo creamos software personalizado.",
+    url: "https://jegdevstudios.com/saber-mas/soft-dev",
+    // Hereda la imagen por defecto del layout, o puedes especificar una diferente aquí
+    // images: [ { url: '...', width: ..., height: ..., alt: '...' } ],
+  },
+};
 function SoftDev() {
   return (
     <section className="d-flex flex-column w-100 p-5 m-0 gap-5">

@@ -1,3 +1,5 @@
+import React from 'react';
+import Image from 'next/image';
 import PropTypes from "prop-types";
 
 function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd }) {
@@ -7,7 +9,7 @@ function CardProduct({ dataPrice, title, text, price, moneda, imageUrl, onAdd })
 
   return (
     <div className="card d-block w-100" data-price={dataPrice}>
-      <img src={imageUrl} className="card-img-top" alt="..." loading="lazy"/>
+      <Image src={imageUrl} className="card-img-top" alt="..." width={400} height={225}/>
       <div className="card-body">
         <h5 className="card-title text-center">{title}</h5>
         <p className="card-text">{text}</p>

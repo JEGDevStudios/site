@@ -1,6 +1,8 @@
+import React from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
-import iconFace from '@/assets/icons/facebook.png';
-import iconWhats from '@/assets/icons/whatsapp.png';
+import iconFace from '/public/icons/facebook.png';
+import iconWhats from '/public/icons/whatsapp.png';
 
 function ButtonsSocial ({ tamaño}) {
     return (
@@ -12,11 +14,10 @@ function ButtonsSocial ({ tamaño}) {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img
+                <Image
                     className='img-fluid w-100'
                     src={iconFace}
                     alt="icono de Facebook"
-                    loading="lazy"
                 />
             </a>
             <a 
@@ -26,11 +27,10 @@ function ButtonsSocial ({ tamaño}) {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img
+                <Image
                     className='img-fluid w-100'
                     src={iconWhats}
                     alt="icono de WhatsApp"
-                    loading="lazy"
                 />
             </a>
         </>

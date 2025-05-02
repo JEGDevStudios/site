@@ -1,6 +1,7 @@
+import React from 'react';
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import imgIconCart from "@/assets/icons/carrito.png";
 
 function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
   const [isCartVisible, setIsCartVisible] = useState(false);
@@ -53,11 +54,12 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
           style={{ width: "4rem", height: "4rem" }}
           onClick={toggleCartVisibility}
         >
-          <img
+          <Image
             className="img-fluid"
-            src={imgIconCart}
+            src="/icons/carrito.png"
             alt="carrito de compras"
-            loading="lazy"
+            width={35}
+            height={35}
           />
         </button>
       )}

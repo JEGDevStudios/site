@@ -1,5 +1,6 @@
+'use client'; // Marcar este archivo como Client Component
 import { useState } from 'react';
-import ButtonsSocial from '@/components/ButtonsSocial';
+import ButtonsSocial from '../../components/ButtonsSocial';
 
 function Contact() {
     const [formData, setFormData] = useState({
