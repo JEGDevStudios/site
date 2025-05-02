@@ -1,6 +1,6 @@
 {
     "name": "JEG Dev Studios",
-    "short_name": "JEG Dev Studios",
+    "short_name": "JEG Studios",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
@@ -9,17 +9,17 @@
     "lang": "es",
     "icons": [
         {
-            "src": "icons-SEO/android-chrome-192x192.png",
+            "src": "/icons-SEO/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons-SEO/android-chrome-512x512.png",
+            "src": "/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons-SEO/apple-touch-icon.png",
+            "src": "/icons/apple-touch-icon-.png",
             "sizes": "180x180",
             "type": "image/png"
         }
