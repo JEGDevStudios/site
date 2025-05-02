@@ -40,17 +40,76 @@
     
     <!-- STRUCTURED DATA (SCHEMA.ORG JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "JEG Dev Studios",
-      "url": "https://jegdevstudios.com/",
-      "logo": "https://jegdevstudios.com/public/icons-SEO/favicon-32x32.png",
-      "sameAs": [
-        "https://www.facebook.com/jegdevstudios"
-      ]
-    }
-    </script>    
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "JEG Dev Studios",
+        "image": "https://jegdevstudios.com/public/logo.webp",
+        "url": "https://jegdevstudios.com/",
+        "telephone": "+52 1 5512197135",
+        "logo": "https://jegdevstudios.com/public/icons-SEO/favicon-32x32.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Álvaro Obregón",
+          "addressRegion": "CDMX",
+          "addressCountry": "MX"
+        },
+        "priceRange": "$$$",
+        "sameAs": [
+          "https://www.facebook.com/jegdevstudios"
+        ]
+      }
+    </script>
+    
+    <!-- FAQPage STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Incluye la creación de sitios web modernos, funcionales y personalizados según tus necesidades, utilizando tecnologías avanzadas como HTML, CSS, JavaScript, React, Tailwind CSS, Astro, Node.js y Express."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Ofrecen sitios web responsivos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, todos nuestros paquetes incluyen diseño responsivo, adaptado a dispositivos móviles, tabletas y computadoras."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué tecnologías utilizan en el desarrollo web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Utilizamos tecnologías modernas como React, Tailwind CSS, Astro, Node.js y Express para desarrollar sitios web rápidos, escalables y eficientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué diferencia hay entre sus paquetes de servicios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada paquete varía según el número de páginas, el nivel de personalización, integración de funcionalidades (como formularios avanzados, galerías multimedia, blog, SEO, etc.), y tecnologías aplicadas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué tan rápido pueden entregar un sitio web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dependiendo del paquete elegido, el tiempo de entrega puede variar entre 1 a 4 semanas."
+            }
+          }
+        ]
+      }
+    </script>      
   </head>
   <body>
     <div id="root"></div>
