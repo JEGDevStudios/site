@@ -13,9 +13,9 @@ function Dashboard() {
       <section className="d-flex flex-md-row flex-column vh-100 p-0 m-0">
         <article className="d-flex flex-column justify-content-center aling-items-center w-100 h-100 p-4">
           <div className="d-flex text-center w-100">
-            <h1 className="display-1">
+            <h2 className="display-1 h1">
               Innovando en desarrollo web y videojuegos
-            </h1>
+            </h2>
           </div>
           <div className="d-flex aling-items-center justify-content-center w-100 gap-5">
             <Link

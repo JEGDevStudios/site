@@ -5,9 +5,9 @@ function NavBar() {
     return (
         <header>
             <nav className="navbar navbar-expand-lg align-items-center bg-black fixed-top w-100">
-                <div className="container-fluid align-items-center">
+                <div className="container-fluid d-flex align-items-center">
                     {/* Logo y Nombre */}
-                    <Link to="/" aria-current="page" className="navbar-brand text-light d-flex align-items-center text-center p-0">
+                    <Link to="/" aria-current="page" className="navbar-brand text-light d-flex justify-content-center align-items-center text-center p-0">
                         <img
                             src={iconLogo}
                             alt="Logo"
@@ -16,7 +16,7 @@ function NavBar() {
                             className="d-inline-block align-text-top p-1"
                             loading="lazy"
                         />
-                        JEG Dev Studios
+                        <h1 className='m-0 p-0 text-center fs-5'>JEG Dev Studios</h1>
                     </Link>
 
                     {/* Botón Hamburguesa para móviles */}
