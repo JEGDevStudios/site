@@ -11,7 +11,6 @@
     "deploy": "gh-pages -b gh-pages -d out"
   },
   "dependencies": {
-    "bootstrap": "^5.3.5",
     "next": "15.3.1",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
