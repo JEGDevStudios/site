@@ -51,10 +51,6 @@ const faqJsonLd = {
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <section className="d-flex flex-md-row flex-column vh-100 p-0 m-0">
         <article className="d-flex flex-column justify-content-center aling-items-center w-100 h-100 p-4">
           <div className="d-flex text-center w-100">

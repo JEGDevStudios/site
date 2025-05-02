@@ -97,31 +97,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'JEG Dev Studios',
-              image: 'https://jegdevstudios.com/public/logo.webp',
-              url: 'https://jegdevstudios.com/',
-              telephone: '+52 1 5512197135',
-              logo: 'https://jegdevstudios.com/public/icons-SEO/favicon-32x32.png',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Álvaro Obregón',
-                addressRegion: 'CDMX',
-                addressCountry: 'MX',
-              },
-              priceRange: '$$$',
-              sameAs: ['https://www.facebook.com/jegdevstudios'],
-            }),
-          }}
-        />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />
         {children}
