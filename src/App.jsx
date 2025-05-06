@@ -18,13 +18,13 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/Aboutus" element={<AboutUs />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/saber-mas/AppDev" element={<AppDev />} />
-          <Route path="/saber-mas/GamesDev" element={<GamesDev />} />
-          <Route path="/saber-mas/SoftDev" element={<SoftDev />} />
-          <Route path="/saber-mas/WebDev" element={<WebDev />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/saber-mas/app-dev" element={<AppDev />} />
+          <Route path="/saber-mas/games-dev" element={<GamesDev />} />
+          <Route path="/saber-mas/soft-dev" element={<SoftDev />} />
+          <Route path="/saber-mas/web-dev" element={<WebDev />} />
         </Routes>
         <Footer />
       </div>

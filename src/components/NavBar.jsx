@@ -51,7 +51,7 @@ function NavBar() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/aboutus" className="nav-link active text-light">
+                                <Link to="/about" className="nav-link active text-light">
                                     Sobre Nosotros
                                 </Link>
                             </li>

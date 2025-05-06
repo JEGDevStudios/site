@@ -20,7 +20,7 @@ function Dashboard() {
           <div className="d-flex aling-items-center justify-content-center w-100 gap-5">
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/Aboutus"
+              to="/about"
               style={{ width: "12rem" }}
             >
               Conócenos
@@ -28,7 +28,7 @@ function Dashboard() {
 
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/Services"
+              to="/services"
               style={{ width: "12rem" }}
             >
               Nuestros Servicios
@@ -36,7 +36,7 @@ function Dashboard() {
 
             <Link
               className="btn btn-dark d-flex justify-content-center align-items-center p-3"
-              to="/Contact"
+              to="/contact"
               style={{ width: "12rem" }}
             >
               Contacto
@@ -70,22 +70,22 @@ function Dashboard() {
           <CardServices
             imageUrl={imgDevWeb}
             title="Desarrollo Web"
-            url="/saber-mas/WebDev"
+            url="/saber-mas/web-dev"
           />
           <CardServices
             imageUrl={imgDevSoft}
             title="Desarrollo de software"
-            url="/saber-mas/SoftDev"
+            url="/saber-mas/soft-dev"
           />
           <CardServices
             imageUrl={imgDevMob}
             title="Desarrollo de aplicaciones"
-            url="/saber-mas/AppDev"
+            url="/saber-mas/app-dev"
           />
           <CardServices
             imageUrl={imgDevGame}
             title="Desarrollo de videojuegos"
-            url="/saber-mas/GamesDev"
+            url="/saber-mas/games-dev"
           />
         </ul>
       </section>
@@ -103,7 +103,7 @@ function Dashboard() {
           />
         </div>
         <div className="d-flex justify-content-center w-100 pt-2 pb-2">
-          <Link className="btn btn-dark" to="/site/Contact">
+          <Link className="btn btn-dark" to="/contact">
             Consulta gratuita
           </Link>
         </div>

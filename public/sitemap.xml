@@ -10,11 +10,11 @@
   <url>
     <loc>https://jegdevstudios.com/services</loc>
     <lastmod>2025-04-30</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <!-- Página de "Servicios" -->
   <url>
-    <loc>https://jegdevstudios.com/aboutus</loc>
+    <loc>https://jegdevstudios.com/about</loc>
     <lastmod>2025-04-30</lastmod>
     <priority>0.7</priority>
   </url>
@@ -22,29 +22,29 @@
   <url>
     <loc>https://jegdevstudios.com/contact</loc>
     <lastmod>2025-04-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/WebDev</loc>
+    <loc>https://jegdevstudios.com/saber-mas/web-dev</loc>
     <lastmod>2025-04-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/SoftDev</loc>
+    <loc>https://jegdevstudios.com/saber-mas/soft-dev</loc>
     <lastmod>2025-04-30</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/AppDev</loc>
+    <loc>https://jegdevstudios.com/saber-mas/app-dev</loc>
     <lastmod>2025-04-30</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más GamesDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/GamesDev</loc>
+    <loc>https://jegdevstudios.com/saber-mas/games-dev</loc>
     <lastmod>2025-04-30</lastmod>
     <priority>0.6</priority>
   </url>
