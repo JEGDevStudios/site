@@ -1,73 +1,37 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function OrderForm({ onClose, orderNumber, items }) {
+function OrderForm({ onClose, onSubmit, orderNumber, items }) {
   const [name, setName] = useState("");
+  const [paternalLastName, setPaternalLastName] = useState("");
+  const [maternalLastName, setMaternalLastName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   
-  const [orderData, setOrderData] = useState({
-    orderNumber,
-    name,
-    email,
-    contact,
-    items,
-  });
-
-  const submitDB = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch('https://jegdevstudios.onrender.com/submit-db', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(orderData),
-      });
-
-      if (response.ok) {
-          alert('Se ha generado su orden exitosamente');
-          setOrderData({
-            orderNumber: '',
-            name: '',
-            email: '',
-            contact: '',
-            items: '',
-          });
-      } else {
-          alert('Error al generar su orden');
-      }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Error al generar su orden');
-    }
-  };
-
-  const openWhatsApp = ({ orderNumber, name, email, contact, items }) => {
+  const openWhatsApp = ({ orderNumber: ordNum, name: custName, email: custEmail, contact: custContact, items: orderItems }) => {
     console.log("Abriendo WhatsApp con estos datos:", {
-      orderNumber,
-      name,
-      email,
-      contact,
-      items,
+      orderNumber: ordNum,
+      name: custName,
+      email: custEmail,
+      contact: custContact,
+      items: orderItems,
     });
     // Crear el mensaje predefinido para WhatsApp
-    let message = `Pedido Nº ${orderNumber}\n`;
-    message += `Nombre: ${name}\n`;
-    message += `Correo: ${email}\n`;
-    message += `Contacto: ${contact}\n\nProductos en el carrito:\n`;
+    let message = `Pedido Nº ${ordNum}\n`;
+    message += `Nombre: ${custName}\n`; // Considerar si se quiere nombre completo aquí
+    message += `Correo: ${custEmail}\n`;
+    message += `Contacto: ${custContact}\n\nProductos en el carrito:\n`;
 
     // Agregar los productos al mensaje
-    items.forEach((item) => {
-      message += `${item.title} (Cantidad: ${item.moneda}, Precio: $${item.dataPrice})\n`;
+    orderItems.forEach((item) => {
+      message += `${item.title} (Cantidad: 1, Precio: $${item.dataPrice} ${item.moneda})\n`;
     });
 
     // Codificar el mensaje para la URL de WhatsApp
     const encodedMessage = encodeURIComponent(message);
 
     // Número de WhatsApp de destino
-    const phoneNumber = "+525654320986";
+    const phoneNumber = "+5215512197135"; // Asegúrate que este es el número correcto
 
     // Construir la URL de WhatsApp
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
@@ -76,11 +40,64 @@ function OrderForm({ onClose, orderNumber, items }) {
     window.open(url, "_blank");
   };
 
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    const orderPayload = {
+      orderNumber,
+      customerInfo: {
+        firstName: name,
+        paternalLastName,
+        maternalLastName,
+        email,
+        contactNumber: contact,
+      },
+      orderItems: items.map(item => ({
+        packageName: item.title,
+        price: item.dataPrice,
+        currency: item.moneda,
+        quantity: 1, // Asumiendo cantidad 1 por cada ítem en el carrito
+      })),
+    };
+    // Abrir WhatsApp antes de intentar enviar a la base de datos
+    openWhatsApp({ orderNumber, name, email, contact, items });
+
+    try {
+      const response = await fetch('https://jegdevstudios.onrender.com/submit-db', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(orderPayload),
+      });
+      if (response.ok) {
+        alert('Se ha generado su orden exitosamente');
+        setName("");
+        setPaternalLastName("");
+        setMaternalLastName("");
+        setEmail("");
+        setContact("");
+        if (onSubmit) {
+          onSubmit(orderPayload); // Notificar al padre sobre el envío exitoso
+        }
+        onClose(); // Cerrar el modal
+      } else {
+          alert('Error al generar su orden');
+      }
+    }
+   // Missing closing brace for try block
+    catch (error) {
+      console.error('Error al enviar la orden:', error);
+      alert('Ocurrió un error al procesar su pedido. Por favor, inténtelo de nuevo.');
+    }
+  };
+
   return (
     <div className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center" style={{ zIndex: 2 }}>
       <div className="bg-white p-4 rounded shadow-lg" style={{ width: '400px' }}>
         <h2 className="text-center mb-4">Formulario de Pedido</h2>
-        <form >
+        <form onSubmit={handleFormSubmit}>
           <div className="mb-3">
             <label htmlFor="orderNumber" className="form-label">Número de Orden</label>
             <input
@@ -100,6 +117,28 @@ function OrderForm({ onClose, orderNumber, items }) {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="paternalLastName" className="form-label">Apellido Paterno</label>
+            <input
+              type="text"
+              className="form-control"
+              id="paternalLastName"
+              value={paternalLastName}
+              onChange={(e) => setPaternalLastName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="maternalLastName" className="form-label">Apellido Materno</label>
+            <input
+              type="text"
+              className="form-control"
+              id="maternalLastName"
+              value={maternalLastName}
+              onChange={(e) => setMaternalLastName(e.target.value)}
               required
             />
           </div>
@@ -133,7 +172,7 @@ function OrderForm({ onClose, orderNumber, items }) {
             >
               Cancelar
             </button>
-            <button type="onSubmit" className="btn btn-primary" onClick={() => {openWhatsApp(); submitDB();}}>
+            <button type="submit" className="btn btn-primary">
               Enviar Pedido
             </button>
           </div>
