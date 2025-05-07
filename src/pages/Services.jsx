@@ -42,17 +42,22 @@ function Services () {
     setIsFormVisible(false);
   };
 
-  const handleSunmitOrder = (orderData) => {
-    console.log("Pedido enviado:", orderData);
+  const handleSubmitOrder = (submittedOrderData) => {
+    console.log("Pedido enviado y procesado por OrderForm:", submittedOrderData);
+    // Limpiar el carrito después de un pedido exitoso
+    setCartItems([]);
+    // Opcionalmente, podrías resetear orderNumber aquí si es necesario.
   };
+
 
   return (
     <>
       {isFormVisible && (
         <OrderForm
           onClose={closeOrderForm}
-          onSibmit={handleSunmitOrder}
+          onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
+          items={cartItems}
         />
       )}
       <ShoppingCart
