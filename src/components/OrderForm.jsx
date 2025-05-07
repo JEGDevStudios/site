@@ -31,7 +31,7 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
     const encodedMessage = encodeURIComponent(message);
 
     // Número de WhatsApp de destino
-    const phoneNumber = "+525654320986"; // Asegúrate que este es el número correcto
+    const phoneNumber = "+5215512197135"; // Asegúrate que este es el número correcto
 
     // Construir la URL de WhatsApp
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
@@ -73,13 +73,6 @@ function OrderForm({ onClose, onSubmit, orderNumber, items }) {
       });
       if (response.ok) {
         alert('Se ha generado su orden exitosamente');
-        setOrderData({
-          orderNumber: '',
-          name: '',
-          email: '',
-          contact: '',
-          items: '',
-        });
         setName("");
         setPaternalLastName("");
         setMaternalLastName("");

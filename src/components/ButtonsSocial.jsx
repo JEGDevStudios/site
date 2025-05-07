@@ -8,7 +8,7 @@ function ButtonsSocial ({ tamaño}) {
             <a
                 className='btn btn-light border border-dark rounded-circle p-3'
                 style={tamaño}
-                href="https://www.facebook.com/profile.php?id=61559431238008"
+                href="https://www.facebook.com/jegdevstudios"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -22,7 +22,7 @@ function ButtonsSocial ({ tamaño}) {
             <a 
                 className='btn btn-light border border-dark rounded-circle p-3'
                 style={tamaño}
-                href="https://wa.me/message/ESNGTOYTZUV3P1"
+                href="https://wa.me/5215512197135"
                 target="_blank"
                 rel="noopener noreferrer"
             >
