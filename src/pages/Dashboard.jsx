@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import iconLogo from "@/assets/img//logo/logoredondogris.webp";
+import iconLogo from "@/assets/img/logo/logoredondogris.webp";
 import imgDevWeb from "@/assets/img/img/index/img-services/Desarrollo-web-min.webp";
 import imgDevSoft from "@/assets/img/img/index/img-services/desarrollo-software-min.webp";
 import imgDevMob from "@/assets/img/img/index/img-services/desarrollo-movil-min.webp";
@@ -77,7 +77,7 @@ function Dashboard() {
           />
         </ul>
       </section>
-      <section className="d-flex flex-column justify-content-center aling-items-center vh-100 text-center w-100 p-5 m-0">
+      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-5 m-0">
         <h2>Obten una consulta gratuita</h2>
         <h3>te orientamos y te guiamos</h3>
         <h4>creamos un presupuesto para tu proyecto</h4>
