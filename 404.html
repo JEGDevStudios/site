@@ -2,11 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
+    <title>Redirigiendo...</title>
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
-      const redirectTo = window.location.pathname + window.location.search + window.location.hash;
-      sessionStorage.redirect = redirectTo;
+      sessionStorage.setItem("redirectPath", window.location.pathname + window.location.search + window.location.hash);
     </script>
   </head>
   <body>
