@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import iconLogo from '../assets/img/logo/logoredondogris.webp';
+import iconLogo from '../assets/img/logo/logo-bg-transparent.webp';
 
 function NavBar() {
     return (
@@ -7,13 +7,13 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg align-items-center bg-white fixed-top w-100">
                 <div className="container-fluid d-flex align-items-center">
                     {/* Logo y Nombre */}
-                    <Link to="/" aria-current="page" className="navbar-brand d-flex text-black justify-content-center align-items-center text-center p-0">
+                    <Link to="/" aria-current="page" className="navbar-brand d-flex text-black justify-content-center align-items-center text-center p-0 gap-2">
                         <img
                             src={iconLogo}
                             alt="Logo"
                             width={40}
                             height={40}
-                            className="d-inline-block align-text-top p-1"
+                            className="d-inline-block align-text-top rounded-circle"
                             loading="lazy"
                         />
                         <h1 className='m-0 p-0 text-center fs-5'>JEG Dev Studios</h1>
@@ -45,8 +45,8 @@ function NavBar() {
                                     Servicios
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/proyects" className="nav-link disabled text-black" style={{ display: 'none' }}>
+                            <li className="nav-item d-none">
+                                <Link to="/proyects" className="nav-link disabled text-black d-none">
                                     Proyectos
                                 </Link>
                             </li>
@@ -55,7 +55,7 @@ function NavBar() {
                                     Sobre Nosotros
                                 </Link>
                             </li>
-                            <li className="nav-item" style={{ display: 'none' }}>
+                            <li className="nav-item d-none">
                                 <Link to="/blog" className="nav-link disabled text-black">
                                     Blog
                                 </Link>
