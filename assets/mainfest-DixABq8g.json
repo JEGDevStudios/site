@@ -2,9 +2,9 @@
     "name": "JEG Dev Studios",
     "short_name": "JEG Studios",
     "start_url": "/",
+    "theme_color": "#fdfdfe",
+    "background_color": "#07182e",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color":"#ffffff",
     "orientation": "portrait",
     "lang": "es",
     "icons": [
@@ -32,6 +32,18 @@
             "src":"/android-chrome-512x512.png",
             "sizes":"512x512",
             "type":"image/png"
+        },
+        {
+            "src": "/public/icons-SEO/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/public/icons-SEO/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }
