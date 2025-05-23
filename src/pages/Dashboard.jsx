@@ -4,21 +4,25 @@ import imgDevWeb from "@/assets/img/img/index/img-services/Desarrollo-web-min.we
 import imgDevSoft from "@/assets/img/img/index/img-services/desarrollo-software-min.webp";
 import imgDevMob from "@/assets/img/img/index/img-services/desarrollo-movil-min.webp";
 import imgDevGame from "@/assets/img/img/index/img-services/desarrollo-videojuegos-min.webp";
+import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
+//import ricPhoto from "@/assets/img/img/team/ricardo-ubaldo.webp";
+import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
+import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import CardServices from "@/components/cardServices";
+import CardTeam from "@/components/CardTeam";
 
 function Dashboard() {
   return (
     <>
-      <section
-        className="d-flex flex-md-row flex-column vh-100 p-0 m-0 __imageBackground"
-      >
+      <section className="d-flex flex-md-row flex-column vh-100 p-0 m-0 mt-5 __imageBackground">
         <article className="d-flex flex-column justify-content-center aling-items-center bg-transparent w-100 h-100 gap-5 p-4">
           <div className="d-flex flex-column bg-transparent aling-items-center justify-content-start w-100">
             <h2 className="display-1 h1 text-light text-shadow">
               Impulsamos tu presencia digital con tecnología innovadora
             </h2>
             <p className="fs-1 text-light text-shadow">
-              En JEG Dev Studios transformamos ideas en soluciones digitales efectivas. <br /> Diseñamos y desarrollamos sitios web.
+              En JEG Dev Studios transformamos ideas en soluciones digitales
+              efectivas. <br /> Diseñamos y desarrollamos sitios web.
             </p>
           </div>
           <div className="d-flex bg-transparent aling-items-center justify-content-start w-100 gap-5">
@@ -40,13 +44,85 @@ function Dashboard() {
           </div>
         </article>
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-5 m-0">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 mt-5 __section-team">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Nuestro equipo excepcional de desarrolladores, diseñadores y creativos
+          trabaja en conjunto para ofrecer soluciones digitales personalizadas
+          que se adaptan a las necesidades de cada cliente.
+        </p>
+        <article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
+          <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-center w-100 h-100 gap-5 p-0 m-0">
+            {/*<CardTeam
+              imageUrl="https://avatars.githubusercontent.com/u/12345678?v=4"
+              name="Ricardo Ubaldo"
+              position="Co-Fundador"
+              linkedin="https://www.linkedin.com/in/ricardo-ubaldo-gonz%C3%A1lez-4522a5291/"
+            />*/}
+            <CardTeam
+              imageUrl={ferPhoto}
+              name="Fernanda Briseño"
+              position="Co-Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/fernanda-brise%C3%B1o-64b310342/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Fernanda Briseño",
+                },
+                {
+                  url: "https://www.behance.net/karlabriseo1",
+                  icon: "icon-behance",
+                  title: "Enlace a perfil de Behance de Fernanda Briseño",
+                },
+              ]}
+            />
+            <CardTeam
+              imageUrl={jhonPhoto}
+              name="Jhonatan Espinal"
+              position="CEO & Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/jhoneg/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Jhonatan Espinal",
+                },
+                {
+                  url: "https://jhoneg-17.github.io/JhonDev/",
+                  icon: "icon-link",
+                  title: "Enlace a sitio web de Jhonatan Espinal",
+                },
+              ]}
+            />
+            <CardTeam
+              imageUrl={leoPhoto}
+              name="Leonardo Gonzalez"
+              position="Co-Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/jose-leonardo-gonzalez-valadez-860b012b4/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Leonardo Gonzalez",
+                },
+              ]}
+            />
+          </ul>
+        </article>
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5">
         <div className="d-flex justify-content-center w-100 p-0 m-0">
           <h2>Sobre lo que hacemos</h2>
         </div>
         <div className="d-flex flex-column text-center justify-content-center w-100 p-0 m-0">
           <h2>Transformamos ideas en experiencias digitales</h2>
-          <p>En <strong>JEG Dev Studios</strong> convertimos tus ideas en proyectos reales. Nuestro equipo desarrolla soluciones digitales personalizadas que incluyen <strong>sitios web profesionales</strong>, <strong>aplicaciones móviles</strong>, <strong>software de escritorio</strong> y <strong>videojuegos</strong>.</p>
+          <p>
+            En <strong>JEG Dev Studios</strong> convertimos tus ideas en
+            proyectos reales. Nuestro equipo desarrolla soluciones digitales
+            personalizadas que incluyen{" "}
+            <strong>sitios web profesionales</strong>,{" "}
+            <strong>aplicaciones móviles</strong>,{" "}
+            <strong>software de escritorio</strong> y{" "}
+            <strong>videojuegos</strong>.
+          </p>
 
           <p className="w-100">
             En JEG Dev Studios nos encargamos de traer a la realidad tus ideas
@@ -80,18 +156,29 @@ function Dashboard() {
           />
         </ul>
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-5 m-0">
+      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-xl-5 p-3 mt-5">
         <h2>¿Por qué elegirnos?</h2>
-        <ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0">
-          <li><p className="fs-2">🏆 +10 años de experiencia combinada</p></li>
-          <li><p className="fs-2">💡 Soluciones personalizadas a tu negocio</p></li>
-          <li><p className="fs-2">🤝 Acompañamiento y soporte</p></li>
-          <li><p className="fs-2">📱 Diseño 100% adaptado a móviles</p></li>
+        <ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">🏆 +5 años de experiencia combinada</p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">💡 Soluciones personalizadas a tu negocio</p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">🤝 Acompañamiento y soporte</p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">📱 Diseño 100% adaptado a móviles</p>
+          </li>
         </ul>
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-5 m-0">
+      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-xl-5 p-3 mt-5">
         <h2>¿Tienes un proyecto? Hablemos</h2>
-        <p>Te ofrecemos una <strong>consulta gratuita</strong> donde analizamos tu idea y te damos una guía clara con presupuesto incluido.</p>
+        <p>
+          Te ofrecemos una <strong>consulta gratuita</strong> donde analizamos
+          tu idea y te damos una guía clara con presupuesto incluido.
+        </p>
         <div className="d-flex justify-content-center p-2">
           <img
             className="img-fluid"
