@@ -185,6 +185,8 @@ function Dashboard() {
             style={{ width: "16rem" }}
             src={iconLogo}
             alt="logo de la empresa"
+            width={256}
+            height={256}
             loading="lazy"
           />
         </div>
