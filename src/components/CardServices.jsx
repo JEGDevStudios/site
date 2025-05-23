@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function CardServices({ imageUrl, title, url }) {
   return (
-    <li className="card d-block" style={{ Width: "18rem" }}>
+    <li className="card d-block p-0" style={{ Width: "18rem" }}>
       <img src={imageUrl} className="card-img-top" alt="imagen de la tarjeta" loading="lazy"/>
       <div className="card-body d-flex flex-column ">
         <h3 className="h5 card-title text-center">{title}</h3>

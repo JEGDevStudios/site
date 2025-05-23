@@ -44,7 +44,7 @@ function Contact() {
     };
 
     return (
-        <section className="d-flex flex-md-row flex-column-reverse justify-content-center align-items-center w-100 vh-100 p-5 gap-5">
+        <section className="d-flex flex-md-row flex-column-reverse justify-content-center align-items-center w-100 vh-100 p-xl-5 p-3 gap-5">
             <article className="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100">
                 <h2>Formulario de Contacto</h2>
                 <form className='d-flex flex-column justify-content-center aling-items-center text-center bg-light border border-dark rounded gap-4 p-4' id="contactForm" onSubmit={handleSubmit} style={{width: "24rem"}}>

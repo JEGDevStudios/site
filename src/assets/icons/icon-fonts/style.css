@@ -1,0 +1,451 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?jxvomh');
+  src:  url('fonts/icomoon.eot?jxvomh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jxvomh') format('truetype'),
+    url('fonts/icomoon.woff?jxvomh') format('woff'),
+    url('fonts/icomoon.svg?jxvomh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-amazonaws:before {
+  content: "\e904";
+}
+.icon-americanexpress:before {
+  content: "\e905";
+  color: #2e77bc;
+}
+.icon-angular:before {
+  content: "\e906";
+  color: #dd0031;
+}
+.icon-apple:before {
+  content: "\e907";
+  color: #999;
+}
+.icon-applepay:before {
+  content: "\e92b";
+}
+.icon-behance:before {
+  content: "\e95b";
+  color: #000;
+}
+.icon-cisco:before {
+  content: "\e92c";
+  color: #1ba0d7;
+}
+.icon-cplusplus:before {
+  content: "\e92d";
+  color: #00599c;
+}
+.icon-crehana:before {
+  content: "\e92e";
+  color: #4b22f4;
+}
+.icon-csharp:before {
+  content: "\e92f";
+  color: #239120;
+}
+.icon-css3:before {
+  content: "\e930";
+  color: #1572b6;
+}
+.icon-csswizardry:before {
+  content: "\e931";
+  color: #f43059;
+}
+.icon-dot-net:before {
+  content: "\e932";
+  color: #5c2d91;
+}
+.icon-epicgames:before {
+  content: "\e933";
+}
+.icon-facebook:before {
+  content: "\e934";
+  color: #1877f2;
+}
+.icon-git1:before {
+  content: "\e935";
+  color: #f05032;
+}
+.icon-github1:before {
+  content: "\e936";
+}
+.icon-gmail:before {
+  content: "\e937";
+  color: #d14836;
+}
+.icon-googlepay:before {
+  content: "\e938";
+  color: #5f6368;
+}
+.icon-googleplay:before {
+  content: "\e939";
+  color: #607d8b;
+}
+.icon-html5:before {
+  content: "\e93a";
+  color: #e34f26;
+}
+.icon-instagram:before {
+  content: "\e93b";
+  color: #e4405f;
+}
+.icon-ios:before {
+  content: "\e93c";
+}
+.icon-java:before {
+  content: "\e93d";
+  color: #007396;
+}
+.icon-javascript1:before {
+  content: "\e93e";
+  color: #f7df1e;
+}
+.icon-messenger:before {
+  content: "\e93f";
+  color: #00b2ff;
+}
+.icon-mongodb:before {
+  content: "\e940";
+  color: #47a248;
+}
+.icon-mysql1:before {
+  content: "\e941";
+  color: #4479a1;
+}
+.icon-next-dot-js:before {
+  content: "\e942";
+}
+.icon-nintendoswitch:before {
+  content: "\e943";
+  color: #e60012;
+}
+.icon-node-dot-js:before {
+  content: "\e944";
+  color: #393;
+}
+.icon-paypal:before {
+  content: "\e945";
+  color: #00457c;
+}
+.icon-php:before {
+  content: "\e946";
+  color: #777bb4;
+}
+.icon-playstation:before {
+  content: "\e947";
+  color: #003791;
+}
+.icon-postgresql:before {
+  content: "\e948";
+  color: #336791;
+}
+.icon-python:before {
+  content: "\e949";
+  color: #3776ab;
+}
+.icon-react1:before {
+  content: "\e94a";
+  color: #61dafb;
+}
+.icon-sass1:before {
+  content: "\e94b";
+  color: #c69;
+}
+.icon-shopify:before {
+  content: "\e94c";
+  color: #7ab55c;
+}
+.icon-steam:before {
+  content: "\e94d";
+}
+.icon-tiktok:before {
+  content: "\e94e";
+}
+.icon-x:before {
+  content: "\e94f";
+}
+.icon-typescript:before {
+  content: "\e950";
+  color: #007acc;
+}
+.icon-unity:before {
+  content: "\e951";
+}
+.icon-visa:before {
+  content: "\e952";
+  color: #142787;
+}
+.icon-visualstudio:before {
+  content: "\e953";
+  color: #5c2d91;
+}
+.icon-visualstudiocode:before {
+  content: "\e954";
+  color: #007acc;
+}
+.icon-w3c:before {
+  content: "\e955";
+  color: #005a9c;
+}
+.icon-xbox:before {
+  content: "\e956";
+  color: #107c10;
+}
+.icon-sass .path1:before {
+  content: "\e900";
+  color: rgb(204, 102, 153);
+}
+.icon-sass .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-bootstrap .path1:before {
+  content: "\e902";
+  color: rgb(108, 25, 255);
+}
+.icon-bootstrap .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-c .path1:before {
+  content: "\e919";
+  color: rgb(40, 53, 147);
+}
+.icon-c .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(92, 107, 192);
+}
+.icon-c .path3:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c .path4:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(57, 73, 171);
+}
+.icon-c-mas .path1:before {
+  content: "\e908";
+  color: rgb(0, 84, 157);
+}
+.icon-c-mas .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(0, 134, 212);
+}
+.icon-c-mas .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c-mas .path4:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(0, 117, 192);
+}
+.icon-c-mas .path5:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c-mas .path6:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c-sharp .path1:before {
+  content: "\e90e";
+  color: rgb(55, 71, 79);
+}
+.icon-c-sharp .path2:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(84, 110, 122);
+}
+.icon-c-sharp .path3:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c-sharp .path4:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-c-sharp .path5:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-c-sharp .path6:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-mysql .path1:before {
+  content: "\e914";
+  color: rgb(0, 121, 107);
+}
+.icon-mysql .path2:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(0, 121, 107);
+}
+.icon-mysql .path3:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(245, 127, 23);
+}
+.icon-mysql .path4:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(245, 127, 23);
+}
+.icon-mysql .path5:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(245, 127, 23);
+}
+.icon-mysql .path6:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(0, 121, 107);
+}
+.icon-mysql .path7:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(0, 121, 107);
+}
+.icon-node-js:before {
+  content: "\e91f";
+  color: #21a366;
+}
+.icon-react .path1:before {
+  content: "\e920";
+  color: rgb(152, 204, 253);
+}
+.icon-react .path2:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(71, 136, 199);
+}
+.icon-react .path3:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(152, 204, 253);
+}
+.icon-react .path4:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(71, 136, 199);
+}
+.icon-git:before {
+  content: "\e921";
+  color: #f4511e;
+}
+.icon-javascript .path1:before {
+  content: "\e922";
+  color: rgb(247, 223, 30);
+}
+.icon-javascript .path2:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(0, 0, 1);
+}
+.icon-css .path1:before {
+  content: "\e923";
+  color: rgb(2, 119, 189);
+}
+.icon-css .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(3, 155, 229);
+}
+.icon-css .path3:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-css .path4:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(238, 238, 238);
+}
+.icon-html .path1:before {
+  content: "\e927";
+  color: rgb(230, 81, 0);
+}
+.icon-html .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(255, 109, 0);
+}
+.icon-html .path3:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-html .path4:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(238, 238, 238);
+}
+.icon-info .path1:before {
+  content: "\e97c";
+  color: rgb(0, 0, 0);
+}
+.icon-info .path2:before {
+  content: "\e97d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download:before {
+  content: "\e9c7";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-close:before {
+  content: "\ea0f";
+}
+.icon-new-tab:before {
+  content: "\ea7e";
+}
+.icon-embed:before {
+  content: "\ea80";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin-bg-black:before {
+  content: "\eac9";
+}
+.icon-linkedin-no-bg:before {
+  content: "\eaca";
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import './App.css';
 
 *{
     
@@ -15,4 +15,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.__section-team {
+    min-height: 100dvh;
+}
+
+.__icons-color::before {
+    color: #000;
 }

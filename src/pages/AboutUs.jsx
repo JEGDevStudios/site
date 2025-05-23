@@ -2,15 +2,13 @@ import ButtonsSocial from '@/components/ButtonsSocial';
 
 function AboutUs () {
     return (
-        <section className='d-flex flex-column w-100'>
-            <article className="d-flex flex-column bg-black justify-content-center aling-items-center w-100 p-5 m-0">
-                <div className="text-center text-light pt-5">
-                    <h1>Sobre Nosotros</h1>
-                    <p>Transformando ideas en experiencias digitales inolvidables</p>
-                </div>
-            </article>
-            <article className="d-flex flex-column w-100 p-5 m-0">
-                <div>
+        <>
+            <section className='d-flex flex-column bg-black justify-content-center aling-items-center w-100  p-xl-5 p-3 mt-5'>
+                <h1 className='text-white'>Sobre Nosotros</h1>
+                <p className='text-white'>Transformando ideas en experiencias digitales inolvidables</p>
+            </section>
+            <section className='d-flex flex-column w-100 p-xl-5 p-3'>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Nuestra Historia</h2>
                     <p>
                     JEG Dev Studios nació de la pasión por la tecnología y la creatividad.
@@ -21,8 +19,8 @@ function AboutUs () {
                     ofrecer soluciones innovadoras en el desarrollo de videojuegos,
                     páginas web, aplicaciones de escritorio y móviles.
                     </p>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Misión y Visión</h2>
                     <p>
                     <strong>Misión:</strong> En JEG Dev Studios, nuestra misión es
@@ -37,8 +35,8 @@ function AboutUs () {
                     integrales y creativas que ayuden a nuestros clientes a alcanzar sus
                     objetivos y a destacar en un mercado competitivo.
                     </p>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Nuestra Ideologia</h2>
                     <p>
                     <strong>JEG:</strong> Jumpstart Every Goal - Impulsa cada objetivo
@@ -49,8 +47,8 @@ function AboutUs () {
                     soluciones empresariales hasta entretenimiento interactivo, estamos
                     aquí para transformar tus ideas en realidades innovadoras.
                     </p>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Nuestros Valores</h2>
                     <ul>
                         <li>
@@ -74,8 +72,8 @@ function AboutUs () {
                             innovadoras pueden florecer y transformarse en soluciones efectivas.
                         </li>
                     </ul>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Nuestro Equipo</h2>
                     <p>
                     En JEG Dev Studios, contamos con un equipo diverso y talentoso de
@@ -93,8 +91,8 @@ function AboutUs () {
                     desarrollo de software y su enfoque en la innovación son la base de
                     nuestro éxito.
                     </p>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Nuestros Servicios</h2>
                     <ul>
                         <li>
@@ -118,8 +116,8 @@ function AboutUs () {
                             consolas.
                         </li>
                     </ul>
-                </div>
-                <div>
+                </article>
+                <article className="d-flex flex-column w-100 p-0 m-0">
                     <h2>Contáctanos</h2>
                     <p>
                         ¿Listo para llevar tu proyecto al siguiente nivel? Ponte en contacto con nosotros hoy mismo.
@@ -143,9 +141,9 @@ function AboutUs () {
                             tamaño = {{width: "4rem"}}
                         />
                     </div>
-                </div>
-            </article>
-        </section>
+                </article>
+            </section>
+        </>
     );
 };
 

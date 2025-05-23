@@ -66,12 +66,10 @@ function Services () {
         onOpenOrderForm={openOrderForm}
         setOrderNumber={setOrderNumber}
       />
-      <section className="d-flex flex-column w-100 vh-100 p-5 overflow-x-auto">
-        <div className="d-flex justify-content-center pt-5">
-          <h1 className="display-1">Desarrollo de sitios web</h1>
-        </div>
+      <section className="d-flex flex-column w-100 h-100 p-xl-5 p-3 mt-5">
+        <h1 className="display-1 pt-5">Desarrollo de sitios web</h1>
         <div className="d-flex flex-md-row flex-column justify-content-start h-100 gap-5">
-          <article className="d-flex text-start flex-column w-100">
+          <article className="d-flex text-start flex-column w-100 p-0">
             <h2>Paquetes de diseño web</h2>
             <p>
               Creamos y desarrollamos tu página web desde cero para que te
